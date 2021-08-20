@@ -1148,12 +1148,12 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-hr {
-  margin-top: 18px;
-  margin-bottom: 18px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
-}
+    hr {
+        border-top: 2px solid black;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13214,7 +13214,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22793;&#25968;&#12398;&#20195;&#20837;">&#22793;&#25968;&#12398;&#20195;&#20837;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#20195;&#20837;">&#182;</a></h2><p>変数宣言をした後，変数に型にあった定数を自由に記憶させることができる．</p>
-<p>変数に値を代入することは， (変数の定義によって確保された)メモリに値を書き込む作業である．</p>
+<p>変数に値を代入することは， (変数の定義によって確保された)<strong>メモリに値を書き込む作業</strong>である．</p>
 <p>C言語では，以下の代入文で行う．</p>
 <div class="highlight"><pre><span></span><span class="nv">変数名</span> <span class="o">=</span> 定数<span class="p">;</span>
 </pre></div>
@@ -13247,15 +13247,10 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <p>sample1.c</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="c1">// 変数の使用例</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
@@ -13273,6 +13268,7 @@ $( document ).ready(function(){
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+<hr>
 
 </div>
 </div>
@@ -13280,7 +13276,11 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<p>実行結果</p>
+
+<pre><code>data = 10
+x = 9.500000 y = 9.500000 z = 20.000000</code></pre>
+
 </div>
 </div>
 </div>
@@ -13331,56 +13331,47 @@ $( document ).ready(function(){
 </tr>
 </tbody>
 </table>
-<p>以下のコードはこれらの演算子を使ったプログラムの例である．</p>
+<p>sample2.cはこれらの演算子を使ったプログラムの例である．</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>// 四則演算
-#include &lt;stdio.h&gt;
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>sample2.c</p>
+<div class="highlight"><pre><span></span><span class="c1">// 四則演算</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-int main() 
-{
-  printf(&quot;10 + 3 = %d\n&quot;, 10 + 3);
-  printf(&quot;10 - 3 = %d\n&quot;, 10 - 3);
-  printf(&quot;10 * 3 = %d\n&quot;, 10 * 3);
-  printf(&quot;10 / 3 = %d\n&quot;, 10 / 3);
-  printf(&quot;10 mod 3 = %d\n&quot;, 10 % 3);
-  return 0;
-}
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;10 + 3 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;10 - 3 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;10 * 3 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;10 / 3 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;10 mod 3 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
+<hr>
 
-    </div>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10 + 3 = 13
+<pre><code>10 + 3 = 13
 10 - 3 = 7
 10 * 3 = 30
 10 / 3 = 3
-10 mod 3 = 1
-</pre>
-</div>
-</div>
+10 mod 3 = 1</code></pre>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13460,65 +13451,56 @@ int main()
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>// 変換指定子の使用例
-#include &lt;stdio.h&gt;
- 
-int main(void)
-{
-  // 文字
-  char str1;
-  str1 = &#39;A&#39;;
-  printf(&quot;%c\n&quot;, str1);
-    
-  char str2[] = &quot;abc&quot;;
-  printf(&quot;%s\n&quot;, str2);    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>sample3.c</p>
+<div class="highlight"><pre><span></span><span class="c1">// 変換指定子の使用例</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-  // 整数
-  int a, b, c;
-  a = 1;
-  b = 2;
-  c = 4;
-  printf(&quot;%d, %d, %d\n&quot;, a, a+b, c);
- 
-  // 実数
-  float x;
-  x = 33.333;
-  printf(&quot;%f\n&quot;, x);
- 
-  return 0;
-}
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// 文字</span>
+  <span class="kt">char</span> <span class="n">str1</span><span class="p">;</span>
+  <span class="n">str1</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">str1</span><span class="p">);</span>
+
+  <span class="kt">char</span> <span class="n">str2</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;abc&quot;</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">str2</span><span class="p">);</span>    
+
+  <span class="c1">// 整数</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="n">c</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %d, %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+
+  <span class="c1">// 実数</span>
+  <span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="mf">33.333</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
+<hr>
 
-    </div>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>A
+<pre><code>A
 abc
 1, 3, 4
-33.333000
-</pre>
-</div>
-</div>
+33.333000</code></pre>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
