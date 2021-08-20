@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Untitled</title>
+<title>変数</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13089,7 +13089,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": false};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13104,16 +13104,155 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="fff">fff<a class="anchor-link" href="#fff">&#182;</a></h1>
+<h1 id="&#22793;&#25968;&#12392;&#12399;">&#22793;&#25968;&#12392;&#12399;<a class="anchor-link" href="#&#22793;&#25968;&#12392;&#12399;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>プログラムでデータを扱う場合，データの入れ物である変数を用意する．</li>
+<li><strong>変数は，値や文字などを持つことができる入れ物</strong>といえる．</li>
+<li>変数にデータを記憶させる際には，メモリの空いている空間に変数を配置させる．</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./fig/変数.png" width="450"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22793;&#25968;&#12398;&#23459;&#35328;">&#22793;&#25968;&#12398;&#23459;&#35328;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#23459;&#35328;">&#182;</a></h2><p>変数を活用する場合，最初に変数の宣言を行う．</p>
+<p>変数の宣言は以下の書式で行う．</p>
+
+<pre><code>データ型 変数名；</code></pre>
+<p>例えば，<code>int型</code>で変数名が<code>value</code>の変数をプログラムで使用するのであれば次のように記述する．</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+</pre></div>
+<p>同じ変数の型の変数であれば，まとめて宣言することが可能である．</p>
+
+<pre><code>データ型 変数名, 変数名, ...;</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22793;&#25968;&#12398;&#22411;">&#22793;&#25968;&#12398;&#22411;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#22411;">&#182;</a></h2><p>C言語では指定できるデータの種類を型と呼ばれるもので定義する．</p>
+<p>以下は変数の主な型である．</p>
+<table>
+<thead><tr>
+<th style="text-align:left">種類</th>
+<th style="text-align:left">型名</th>
+<th style="text-align:center">バイト幅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">文字型</td>
+<td style="text-align:left">char</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:left">整数型</td>
+<td style="text-align:left">int</td>
+<td style="text-align:center">2 (4)</td>
+</tr>
+<tr>
+<td style="text-align:left">倍長整数型</td>
+<td style="text-align:left">long</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left">単精度浮動小数点数</td>
+<td style="text-align:left">float</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left">倍精度浮動小数点数</td>
+<td style="text-align:left">double</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>型ごとに割り当てられるサイズが異なる．</p>
+</li>
+<li><p>また，バイト幅および扱える数値の範囲は処理系により異なる．</p>
+</li>
+<li><p>データサイズは<code>sizeof演算子</code>で確認できる．</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22793;&#25968;&#12398;&#20195;&#20837;">&#22793;&#25968;&#12398;&#20195;&#20837;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#20195;&#20837;">&#182;</a></h2><p>変数宣言をした後，変数に型にあった定数を自由に記憶させることができる．</p>
+<p>変数に値を代入することは， (変数の定義によって確保された)メモリに値を書き込む作業である．</p>
+<p>C言語では，以下の代入文で行う．</p>
+<div class="highlight"><pre><span></span><span class="err">変数名</span> <span class="o">=</span> <span class="err">定数</span><span class="p">;</span>
+</pre></div>
+<p>■ 変数の代入例</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</pre></div>
+<p>代入文は， <strong>左辺の変数に右辺の式の値を格納（代入）する</strong>こと表す．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>変数には定数だけではなく，変数の値も代入することができる．</p>
+<p>また，演算子を用いた式の値も代入できる．</p>
+<div class="highlight"><pre><span></span><span class="err">変数名</span> <span class="o">=</span> <span class="err">変数名</span><span class="p">;</span>
+</pre></div>
+<p>■ 代入例</p>
+<div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+<span class="n">x</span>  <span class="o">=</span> <span class="mf">9.5</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> tutormagic
+<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
+
+int main(void) {
+  int data;
+  double x, y, z;
+  
+  data = 10;
+  printf(&quot;data = %d\n&quot;, data);
+
+  x  = 9.5;
+  y = x;
+  z = x + y + 1;
+
+  printf(&quot;x = %f y = %f z = %f\n&quot;, x, y, z);
+
+  return 0;
+}
 </pre></div>
 
     </div>
@@ -13130,8 +13269,8 @@ $( document ).ready(function(){
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The tutormagic extension is already loaded. To reload it, use:
-  %reload_ext tutormagic
+<pre>data = 10
+x = 9.500000 y = 9.500000 z = 20.000000
 </pre>
 </div>
 </div>
@@ -13143,7 +13282,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./fig/アドレス.png" width="200"></p>
+<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20int%20data%3B%0A%20%20double%20x,%20y,%20z%3B%0A%20%20%0A%20%20data%20%3D%2010%3B%0A%20%20printf%28%22data%20%3D%20%25d%5Cn%22,%20data%29%3B%0A%0A%20%20x%20%20%3D%209.5%3B%0A%20%20y%20%3D%20x%3B%0A%20%20z%20%3D%20x%20%2B%20y%20%2B%201%3B%0A%0A%20%20printf%28%22x%20%3D%20%25f%20y%20%3D%20%25f%20z%20%3D%20%25f%5Cn%22,%20x,%20y,%20z%29%3B%0A%0A%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>
@@ -13151,19 +13290,64 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="test">test<a class="anchor-link" href="#test">&#182;</a></h1>
+<h1 id="&#31639;&#34899;&#28436;&#31639;&#23376;">&#31639;&#34899;&#28436;&#31639;&#23376;<a class="anchor-link" href="#&#31639;&#34899;&#28436;&#31639;&#23376;">&#182;</a></h1><p>C言語の算術演算子(演算記号）には以下のものがある．</p>
+<table>
+<thead><tr>
+<th style="text-align:center">演算名</th>
+<th style="text-align:center">演算子</th>
+<th style="text-align:center">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">加算</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">和 (足し算)</td>
+</tr>
+<tr>
+<td style="text-align:center">減算</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">差   (引き算)</td>
+</tr>
+<tr>
+<td style="text-align:center">乗算</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">積 (掛け算)</td>
+</tr>
+<tr>
+<td style="text-align:center">除算</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">商 (割り算)</td>
+</tr>
+<tr>
+<td style="text-align:center">剰余</td>
+<td style="text-align:center">%</td>
+<td style="text-align:center">整数の割り算の余り</td>
+</tr>
+</tbody>
+</table>
+<p>以下のコードはこれらの演算子を使ったプログラムの例である．</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">tutor</span> -l python3
-a = 1
-b = 2
-print(a + b)
+<div class=" highlight hl-text/x-csrc"><pre><span></span>// 四則演算
+#include &lt;stdio.h&gt;
+
+int main() 
+{
+  printf(&quot;10 + 3 = %d\n&quot;, 10 + 3);
+  printf(&quot;10 - 3 = %d\n&quot;, 10 - 3);
+  printf(&quot;10 * 3 = %d\n&quot;, 10 * 3);
+  printf(&quot;10 / 3 = %d\n&quot;, 10 / 3);
+  printf(&quot;10 mod 3 = %d\n&quot;, 10 % 3);
+  return 0;
+}
 </pre></div>
 
     </div>
@@ -13179,19 +13363,152 @@ print(a + b)
     <div class="prompt"></div>
 
 
-
-<div class="output_html rendered_html output_subarea ">
-
-<iframe
-    width="100%"
-    height="350"
-    src="http://pythontutor.com/iframe-embed.html#code=a%20%3D%201%0Ab%20%3D%202%0Aprint%28a%20%2B%20b%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&curInstr=0&&verticalStack=false&py=3&rawInputLstJSON=%5B%5D&codeDivWidth=50%25&codeDivHeight=100%25"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 + 3 = 13
+10 - 3 = 7
+10 * 3 = 30
+10 / 3 = 3
+10 mod 3 = 1
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>C言語では，演算子の左右の項が共に整数であると，除算の結果も整数となる．</p>
+<p>そのため，除算の結果は，小数点以下を切り捨てて3となっている．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#22793;&#25968;&#12398;&#20516;&#12434;&#20986;&#21147;">&#22793;&#25968;&#12398;&#20516;&#12434;&#20986;&#21147;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#20516;&#12434;&#20986;&#21147;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>printf 関数を使って，文字列を出力する場合は次のように記述する．</p>
+<div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;標準出力の書式&quot;</span><span class="p">);</span>
+</pre></div>
+</li>
+<li><p>変数の値を出力する場合には，「標準出力の書式」の後ろにカンマ<code>,</code>をつけて，「式や変数」を続る．</p>
+<div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;標準出力の書式&quot;</span><span class="p">,</span> <span class="err">式や変数</span><span class="p">);</span>
+</pre></div>
+</li>
+<li><p>式や変数が複数ある場合はカンマ<code>,</code>で区切って，「式や変数」を続ける．</p>
+<div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;標準出力の書式&quot;</span><span class="p">,</span> <span class="err">式や変数</span><span class="mi">1</span><span class="p">,</span> <span class="err">式や変数</span><span class="mi">2</span><span class="p">,</span> <span class="err">式や変数</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</li>
+<li><p>printf 関数を使って変数の値を出力する場合には<code>%</code>からはじまる「変換指定子」を使う．</p>
+<p>変換指定子の使用例</p>
+<div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %d, %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+<p>変換指定子は「変数の型」によって異なる．</p>
+</li>
+</ul>
+<table>
+<thead><tr>
+<th style="text-align:center">変数の型</th>
+<th style="text-align:center">宣言例</th>
+<th style="text-align:center">画面への出力</th>
+<th style="text-align:center">キーボードからの入力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">整数</td>
+<td style="text-align:center">int  a;</td>
+<td style="text-align:center">printf("%d",a);</td>
+<td style="text-align:center">scanf("%d",&amp;a);</td>
+</tr>
+<tr>
+<td style="text-align:center">実数</td>
+<td style="text-align:center">double  a;</td>
+<td style="text-align:center">printf("%f",a);</td>
+<td style="text-align:center">scanf("%lf",&amp;a);</td>
+</tr>
+<tr>
+<td style="text-align:center">文字(1文字)</td>
+<td style="text-align:center">char  a;</td>
+<td style="text-align:center">printf("%c",a);</td>
+<td style="text-align:center">scanf("%c",&amp;a);</td>
+</tr>
+<tr>
+<td style="text-align:center">文字列</td>
+<td style="text-align:center">char  a[20];</td>
+<td style="text-align:center">printf("%s",a);</td>
+<td style="text-align:center">scanf("%s",a);</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-text/x-csrc"><pre><span></span>// 変換指定子の使用例
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  // 文字
+  char str1;
+  str1 = &#39;A&#39;;
+  printf(&quot;%c\n&quot;, str1);
+    
+  char str2[] = &quot;abc&quot;;
+  printf(&quot;%s\n&quot;, str2);    
+
+  // 整数
+  int a, b, c;
+  a = 1;
+  b = 2;
+  c = 4;
+  printf(&quot;%d, %d, %d\n&quot;, a, a+b, c);
+ 
+  // 実数
+  float x;
+  x = 33.333;
+  printf(&quot;%f\n&quot;, x);
+ 
+  return 0;
+}
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A
+abc
+1, 3, 4
+33.333000
+</pre>
+</div>
 </div>
 
 </div>
@@ -13203,7 +13520,7 @@ print(a + b)
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-text/x-csrc"><pre><span></span> 
 </pre></div>
 
     </div>

@@ -1148,12 +1148,12 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-hr {
-  margin-top: 18px;
-  margin-bottom: 18px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
-}
+    hr {
+        border-top: 2px solid black;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13022,6 +13022,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13116,51 +13129,41 @@ $( document ).ready(function(){
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>sample1.c</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-int main(void) 
-{
-    
-    printf(&quot;hello world\n&quot;);
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+<span class="p">{</span>
 
-    return (0);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
-}
+    <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
+<div class="highlight"><pre><span></span>hello world
 </pre></div>
 
-    </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hello world
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>上記のコードの各部分の説明</p>
-<p><img src="./fig/基本事項.png" width="500"></p>
+<p><img style="float: left;"　src="./fig/基本事項.png" width="500"></p>
 
 </div>
 </div>
@@ -13194,47 +13197,26 @@ int main(void)
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>sample2.c</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-int main(void)
-{
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
 
-    printf(&quot;こんにちは\n&quot;);
-    printf(&quot;hello world\n&quot;);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;こんにちは</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
-    return (0);
-
-}
+    <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>こんにちは
-hello world
-</pre>
-</div>
-</div>
+<hr>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13278,8 +13260,8 @@ hello world
 </pre></div>
 <p>のように記述する．</p>
 <p>実行させるには，</p>
-
-<pre><code>% ./hello</code></pre>
+<div class="highlight"><pre><span></span>% ./hello
+</pre></div>
 <p>のように入力する</p>
 
 </div>

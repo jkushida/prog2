@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>構造体</title>
+<title>変数</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13022,6 +13022,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13089,7 +13102,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "184.391px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13104,109 +13117,17 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://c-lang.sevendays-study.com/ex-day5.html">http://c-lang.sevendays-study.com/ex-day5.html</a></p>
-
+<h1 id="&#22793;&#25968;&#12392;&#12399;">&#22793;&#25968;&#12392;&#12399;<a class="anchor-link" href="#&#22793;&#25968;&#12392;&#12399;">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#27083;&#36896;&#20307;">&#27083;&#36896;&#20307;<a class="anchor-link" href="#&#27083;&#36896;&#20307;">&#182;</a></h1><p>プログラムがある程度大規模になってくると，一つの概念に対して複数の変数が割り当てられることがある．</p>
-<p>例えば，学校で学生のデータベースを作る時、その学生の<code>int型</code>の学生番号，<code>char型</code>の名前，<code>double型</code>の平均点などのデータをひとまとめにして扱う事になる．</p>
-<p>このようなプログラムを作成する際は，複数の変数をひとまとめにする<strong>構造体</strong>を用いる．</p>
-<p><img src="./fig/配列と構造体.png" width="500"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>次のプログラムは，構造体を使って学生情報を表示するものである．</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
- 
-struct student{    // 学生情報
-  int no;          // 学生番号
-  char name[10];   // 氏名
-  double average;  // 平均点
-};
- 
-int main(){
-    struct student seito1 = {5, &quot;Yamada&quot;, 85.3};
-
-    //  データの内訳を表示
-    printf(&quot;学生番号: %d,  氏名: %s,  平均点: %f\n&quot;,seito1.no, seito1.name, seito1.average);
-    return (0);
-}
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>学生番号: 5,  氏名: Yamada,  平均点: 85.300000
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstring.h%3E%0A%20%0Astruct%20student%7B%20%20%20%20%20%20//%20%E5%AD%A6%E7%94%9F%E6%83%85%E5%A0%B1%0A%20%20%20%20int%20no%3B%20%20%20%20%20%20%20%20%20%20//%20%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%0A%20%20%20%20char%20name%5B10%5D%3B%20%20%20//%20%E6%B0%8F%E5%90%8D%0A%20%20%20%20double%20average%3B%20%20//%20%E5%B9%B3%E5%9D%87%E7%82%B9%0A%7D%3B%0A%20%0Aint%20main%28%29%7B%0A%20%20%20%20struct%20student%20seito1%20%3D%20%7B5,%20%22Yamada%22,%2085.3%7D%3B%0A%0A%20%20%20%20//%20%20%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%86%85%E8%A8%B3%E3%82%92%E8%A1%A8%E7%A4%BA%0A%20%20%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%20%25d,%20%20%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20%E5%B9%B3%E5%9D%87%E7%82%B9%3A%20%25f%5Cn%22,seito1.no,%20seito1.name,%20seito1.average%29%3B%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27083;&#36896;&#20307;&#12398;&#22411;&#26528;&#12398;&#20316;&#25104;">&#27083;&#36896;&#20307;&#12398;&#22411;&#26528;&#12398;&#20316;&#25104;<a class="anchor-link" href="#&#27083;&#36896;&#20307;&#12398;&#22411;&#26528;&#12398;&#20316;&#25104;">&#182;</a></h2><p>構造体を使うにはまず型枠(テンプレート)を作成する必要がある．</p>
-<p>構造体のテンプレートは次の書式で宣言を行う．</p>
-<p><img src="./fig/構造体テンプレート.png" width="250"></p>
-<p>上記のコードは，</p>
 <ul>
-<li><code>int型</code>の学生番号</li>
-<li><code>char型配列</code>の氏名</li>
-<li><code>double型</code>の平均点</li>
-</ul>
-<p>をまとめて構造体の型枠を作り，名前を<code>student</code>としている．</p>
-<p>このとき，<code>student</code>を<strong>タグ名</strong>と呼び，<code>no</code>, <code>name</code>, <code>average</code>を<strong>メンバ名</strong>と呼ぶ．</p>
-<p><img src="./fig/構造体1.png" width="300"></p>
-<p>これで，<code>student</code>という名前の構造体の型枠が作成されたことになる．</p>
-<ul>
-<li>この状態では，タグ名の型を作っただけなので，中身はまだ空のまま</li>
-<li>「メンバ名」という表現をしてるが，変数名と同様</li>
-<li>最後の <code>}</code> の後に<code>；</code>が必要</li>
-</ul>
-<p>なお，構造体も型を置く場所によって有効範囲が変化する．</p>
-<ul>
-<li>関数の外で宣言するとグローバル変数のようにプログラム全体で使用することができる．</li>
-<li>関数の中で宣言するとローカル変数のようにその関数内のみでしか使用できない．</li>
+<li>プログラムでデータを扱う場合，データの入れ物である変数を用意する．</li>
+<li><strong>変数は，値や文字などを持つことができる入れ物</strong>といえる．</li>
+<li>変数にデータを記憶させる際には，メモリの空いている空間に変数を配置させる．</li>
 </ul>
 
 </div>
@@ -13215,16 +13136,202 @@ int main(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27083;&#36896;&#20307;&#12398;&#12458;&#12502;&#12472;&#12455;&#12463;&#12488;&#12398;&#23459;&#35328;">&#27083;&#36896;&#20307;&#12398;&#12458;&#12502;&#12472;&#12455;&#12463;&#12488;&#12398;&#23459;&#35328;<a class="anchor-link" href="#&#27083;&#36896;&#20307;&#12398;&#12458;&#12502;&#12472;&#12455;&#12463;&#12488;&#12398;&#23459;&#35328;">&#182;</a></h2><p>枠型を作成したあとは，次の構文で構造体のオブジェクトを宣言する．</p>
-<div class="highlight"><pre><span></span><span class="k">struct</span> <span class="err">構造体タグ名</span> <span class="err">オブジェクト名の並び</span><span class="p">;</span>
+<p><img src="./fig/変数.png" width="450"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22793;&#25968;&#12398;&#23459;&#35328;">&#22793;&#25968;&#12398;&#23459;&#35328;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#23459;&#35328;">&#182;</a></h2><p>変数を活用する場合，最初に変数の宣言を行う．</p>
+<p>変数の宣言は以下の書式で行う．</p>
+
+<pre><code>データ型 変数名；</code></pre>
+<p>例えば，<code>int型</code>で変数名が<code>value</code>の変数をプログラムで使用するのであれば次のように記述する．</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
 </pre></div>
-<p>よって，上記コードのように</p>
-<div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">student</span> <span class="n">seito1</span><span class="p">;</span> <span class="c1">//構造体の変数を定義</span>
+<p>同じ変数の型の変数であれば，まとめて宣言することが可能である．</p>
+
+<pre><code>データ型 変数名, 変数名, ...;</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22793;&#25968;&#12398;&#22411;">&#22793;&#25968;&#12398;&#22411;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#22411;">&#182;</a></h2><p>C言語では指定できるデータの種類を型と呼ばれるもので定義する．</p>
+<p>以下は変数の主な型である．</p>
+<table>
+<thead><tr>
+<th style="text-align:left">種類</th>
+<th style="text-align:left">型名</th>
+<th style="text-align:center">バイト幅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">文字型</td>
+<td style="text-align:left">char</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:left">整数型</td>
+<td style="text-align:left">int</td>
+<td style="text-align:center">2 (4)</td>
+</tr>
+<tr>
+<td style="text-align:left">倍長整数型</td>
+<td style="text-align:left">long</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left">単精度浮動小数点数</td>
+<td style="text-align:left">float</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left">倍精度浮動小数点数</td>
+<td style="text-align:left">double</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>型ごとに割り当てられるサイズが異なる．</p>
+</li>
+<li><p>また，バイト幅および扱える数値の範囲は処理系により異なる．</p>
+</li>
+<li><p>データサイズは<code>sizeof演算子</code>で確認できる．</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22793;&#25968;&#12398;&#20195;&#20837;">&#22793;&#25968;&#12398;&#20195;&#20837;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#20195;&#20837;">&#182;</a></h2><p>変数宣言をした後，変数に型にあった定数を自由に記憶させることができる．</p>
+<p>変数に値を代入することは， (変数の定義によって確保された)メモリに値を書き込む作業である．</p>
+<p>C言語では，以下の代入文で行う．</p>
+<div class="highlight"><pre><span></span><span class="nv">変数名</span> <span class="o">=</span> 定数<span class="p">;</span>
 </pre></div>
-<p>メモリ上にseito1という名前の構造体の変数が確保される．</p>
-<p>また，</p>
-<div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">student</span> <span class="n">seito1</span><span class="p">;</span> <span class="c1">//構造体の変数を定義</span>
+<p>■ 変数の代入例</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </pre></div>
+<p>代入文は， <strong>左辺の変数に右辺の式の値を格納（代入）する</strong>こと表す．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>変数には定数だけではなく，変数の値も代入することができる．</p>
+<p>また，演算子を用いた式の値も代入できる．</p>
+
+<pre><code>変数名 = 変数名;</code></pre>
+<p>■ 代入例</p>
+<div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+<span class="n">x</span>  <span class="o">=</span> <span class="mf">9.5</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>sample1.c</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+
+  <span class="n">data</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;data = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+
+  <span class="n">x</span>  <span class="o">=</span> <span class="mf">9.5</span><span class="p">;</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;x = %f y = %f z = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20int%20data%3B%0A%20%20double%20x,%20y,%20z%3B%0A%20%20%0A%20%20data%20%3D%2010%3B%0A%20%20printf%28%22data%20%3D%20%25d%5Cn%22,%20data%29%3B%0A%0A%20%20x%20%20%3D%209.5%3B%0A%20%20y%20%3D%20x%3B%0A%20%20z%20%3D%20x%20%2B%20y%20%2B%201%3B%0A%0A%20%20printf%28%22x%20%3D%20%25f%20y%20%3D%20%25f%20z%20%3D%20%25f%5Cn%22,%20x,%20y,%20z%29%3B%0A%0A%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#31639;&#34899;&#28436;&#31639;&#23376;">&#31639;&#34899;&#28436;&#31639;&#23376;<a class="anchor-link" href="#&#31639;&#34899;&#28436;&#31639;&#23376;">&#182;</a></h1><p>C言語の算術演算子(演算記号）には以下のものがある．</p>
+<table>
+<thead><tr>
+<th style="text-align:center">演算名</th>
+<th style="text-align:center">演算子</th>
+<th style="text-align:center">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">加算</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">和 (足し算)</td>
+</tr>
+<tr>
+<td style="text-align:center">減算</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">差   (引き算)</td>
+</tr>
+<tr>
+<td style="text-align:center">乗算</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">積 (掛け算)</td>
+</tr>
+<tr>
+<td style="text-align:center">除算</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">商 (割り算)</td>
+</tr>
+<tr>
+<td style="text-align:center">剰余</td>
+<td style="text-align:center">%</td>
+<td style="text-align:center">整数の割り算の余り</td>
+</tr>
+</tbody>
+</table>
+<p>以下のコードはこれらの演算子を使ったプログラムの例である．</p>
 
 </div>
 </div>
@@ -13234,182 +13341,156 @@ int main(){
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
- 
-//  学生のデータを入れる構造体
-struct student{
-    int id; //  学生番号
-    char name[15]; //  名前
-    int age;        //  年齢
-};
- 
-//  構造体の名前をtypedefで定義
-typedef struct student student_data;
- 
-int main(){
-    int i;
-    student_data data[] = {
-        { 1,&quot;山田太郎&quot;,18 },
-        { 2,&quot;佐藤良子&quot;,19 },
-        { 3,&quot;太田隆&quot;,18 },
-        { 4,&quot;中田優子&quot;,18 }
-    };
-    //  データの内訳を表示
-    for(i = 0; i &lt; 4; i++){
-        printf(&quot;学生番号:%d 名前:%s 年齢:%d\n&quot;,data[i].id,data[i].name,data[i].age);
-    }
-    return (0);
-}
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>学生番号:1 名前:山田太郎 年齢:18
-学生番号:2 名前:佐藤良子 年齢:19
-学生番号:3 名前:太田隆 年齢:18
-学生番号:4 名前:中田優子 年齢:18
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstring.h%3E%0A%20%0A//%20%20%E5%AD%A6%E7%94%9F%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%85%A5%E3%82%8C%E3%82%8B%E6%A7%8B%E9%80%A0%E4%BD%93%0Astruct%20student%7B%0A%20%20%20%20int%20id%3B%20//%20%20%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%0A%20%20%20%20char%20name%5B15%5D%3B%20//%20%20%E5%90%8D%E5%89%8D%0A%20%20%20%20int%20age%3B%20%20%20%20%20%20%20%20//%20%20%E5%B9%B4%E9%BD%A2%0A%7D%3B%0A%20%0A//%20%20%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AE%E5%90%8D%E5%89%8D%E3%82%92typedef%E3%81%A7%E5%AE%9A%E7%BE%A9%0Atypedef%20struct%20student%20student_data%3B%0A%20%0Aint%20main%28%29%7B%0A%20%20%20%20int%20i%3B%0A%20%20%20%20student_data%20data%5B%5D%20%3D%20%7B%0A%20%20%20%20%20%20%20%20%7B%201,%22%E5%B1%B1%E7%94%B0%E5%A4%AA%E9%83%8E%22,18%20%7D,%0A%20%20%20%20%20%20%20%20%7B%202,%22%E4%BD%90%E8%97%A4%E8%89%AF%E5%AD%90%22,19%20%7D,%0A%20%20%20%20%20%20%20%20%7B%203,%22%E5%A4%AA%E7%94%B0%E9%9A%86%22,18%20%7D,%0A%20%20%20%20%20%20%20%20%7B%204,%22%E4%B8%AD%E7%94%B0%E5%84%AA%E5%AD%90%22,18%20%7D%0A%20%20%20%20%7D%3B%0A%20%20%20%20//%20%20%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%86%85%E8%A8%B3%E3%82%92%E8%A1%A8%E7%A4%BA%0A%20%20%20%20for%28i%20%3D%200%3B%20i%20%3C%204%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%25d%20%E5%90%8D%E5%89%8D%3A%25s%20%E5%B9%B4%E9%BD%A2%3A%25d%5Cn%22,data%5Bi%5D.id,data%5Bi%5D.name,data%5Bi%5D.age%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
-
-#define N 3
-
-/* 構造体data_recordを定義し、新たにそれをRECORD型として定義 */
-typedef struct data_record {  /* double型データを格納するための構造体 */
-
-         int id;                  /* 識別番号 */
-
-         int length;             /* 格納データの長さ */
-
-         double data[6];       /* データ格納用配列 */
-
-} RECORD;
-
-
-int main(void) {
-
-         /* RECORD型構造体の配列を宣言し、各要素の各メンバを初期化 */
-         RECORD tbl[N] = {{1, 5, {0.0, 1.1, 2.2, 3.3, 4.4}},
-                             {2, 3, {12.3, 23.4, 34.5}},
-                             {3, 2, {0.987, 0.654}}};
-         int i, j;
-         /* 配列tblの各要素（FILE型構造体オブジェクト）のメンバ変数data（配列）の各要素（double型実数）の値を表示 */
-         for (i = 0; i &lt; N; i++) {
-
-                 printf(&quot;record #%d\n&quot;, tbl[i].id);
-
-                 for (j = 0; j &lt; tbl[i].length; j++)
-
-                          printf(&quot;%5.3f &quot;, tbl[i].data[j]);
-
-                 printf(&quot;\n&quot;);
-
-         }
-
-         return 0;
-
-}
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>record #1
-0.000 1.100 2.200 3.300 4.400 
-record #2
-12.300 23.400 34.500 
-record #3
-0.987 0.654 
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0A%23define%20N%203%0A%0A/*%20%E6%A7%8B%E9%80%A0%E4%BD%93data_record%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%97%E3%80%81%E6%96%B0%E3%81%9F%E3%81%AB%E3%81%9D%E3%82%8C%E3%82%92RECORD%E5%9E%8B%E3%81%A8%E3%81%97%E3%81%A6%E5%AE%9A%E7%BE%A9%20*/%0Atypedef%20struct%20data_record%20%7B%20%20/*%20double%E5%9E%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%A0%BC%E7%B4%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%A7%8B%E9%80%A0%E4%BD%93%20*/%0A%0A%20%20%20%20%20%20%20%20%20int%20id%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20/*%20%E8%AD%98%E5%88%A5%E7%95%AA%E5%8F%B7%20*/%0A%0A%20%20%20%20%20%20%20%20%20int%20length%3B%20%20%20%20%20%20%20%20%20%20%20%20%20/*%20%E6%A0%BC%E7%B4%8D%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E9%95%B7%E3%81%95%20*/%0A%0A%20%20%20%20%20%20%20%20%20double%20data%5B6%5D%3B%20%20%20%20%20%20%20/*%20%E3%83%87%E3%83%BC%E3%82%BF%E6%A0%BC%E7%B4%8D%E7%94%A8%E9%85%8D%E5%88%97%20*/%0A%0A%7D%20RECORD%3B%0A%0A%0Aint%20main%28void%29%20%7B%0A%0A%20%20%20%20%20%20%20%20%20/*%20RECORD%E5%9E%8B%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AE%E9%85%8D%E5%88%97%E3%82%92%E5%AE%A3%E8%A8%80%E3%81%97%E3%80%81%E5%90%84%E8%A6%81%E7%B4%A0%E3%81%AE%E5%90%84%E3%83%A1%E3%83%B3%E3%83%90%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%20*/%0A%20%20%20%20%20%20%20%20%20RECORD%20tbl%5BN%5D%20%3D%20%7B%7B1,%205,%20%7B0.0,%201.1,%202.2,%203.3,%204.4%7D%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B2,%203,%20%7B12.3,%2023.4,%2034.5%7D%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B3,%202,%20%7B0.987,%200.654%7D%7D%7D%3B%0A%20%20%20%20%20%20%20%20%20int%20i,%20j%3B%0A%20%20%20%20%20%20%20%20%20/*%20%E9%85%8D%E5%88%97tbl%E3%81%AE%E5%90%84%E8%A6%81%E7%B4%A0%EF%BC%88FILE%E5%9E%8B%E6%A7%8B%E9%80%A0%E4%BD%93%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%EF%BC%89%E3%81%AE%E3%83%A1%E3%83%B3%E3%83%90%E5%A4%89%E6%95%B0data%EF%BC%88%E9%85%8D%E5%88%97%EF%BC%89%E3%81%AE%E5%90%84%E8%A6%81%E7%B4%A0%EF%BC%88double%E5%9E%8B%E5%AE%9F%E6%95%B0%EF%BC%89%E3%81%AE%E5%80%A4%E3%82%92%E8%A1%A8%E7%A4%BA%20*/%0A%20%20%20%20%20%20%20%20%20for%20%28i%20%3D%200%3B%20i%20%3C%20N%3B%20i%2B%2B%29%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22record%20%23%25d%5Cn%22,%20tbl%5Bi%5D.id%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20%28j%20%3D%200%3B%20j%20%3C%20tbl%5Bi%5D.length%3B%20j%2B%2B%29%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%255.3f%20%22,%20tbl%5Bi%5D.data%5Bj%5D%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20return%200%3B%0A%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>// 構造体の配列
-// http://www.den.t.u-tokyo.ac.jp/ad_prog/struct/#%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%A8%E9%85%8D%E5%88%97%E3%81%AE%E5%8B%95%E7%9A%84%E7%A2%BA%E4%BF%9D
-
-
+<div class=" highlight hl-text/x-csrc"><pre><span></span>// 四則演算
 #include &lt;stdio.h&gt;
 
-typedef struct {
-    int id;
-    double score;
-} student;
+int main() 
+{
+  printf(&quot;10 + 3 = %d\n&quot;, 10 + 3);
+  printf(&quot;10 - 3 = %d\n&quot;, 10 - 3);
+  printf(&quot;10 * 3 = %d\n&quot;, 10 * 3);
+  printf(&quot;10 / 3 = %d\n&quot;, 10 / 3);
+  printf(&quot;10 mod 3 = %d\n&quot;, 10 % 3);
+  return 0;
+}
+</pre></div>
 
-// 静的配列の宣言
-#define N 5
-student students[N];
+    </div>
+</div>
+</div>
 
-int main() {
-    // 値を代入
-    for (int i = 0; i &lt; N; i++) {
-        students[i].id = i;
-        students[i].score = i * 10.0;
-    }
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 + 3 = 13
+10 - 3 = 7
+10 * 3 = 30
+10 / 3 = 3
+10 mod 3 = 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>C言語では，演算子の左右の項が共に整数であると，除算の結果も整数となる．</p>
+<p>そのため，除算の結果は，小数点以下を切り捨てて3となっている．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#22793;&#25968;&#12398;&#20516;&#12434;&#20986;&#21147;">&#22793;&#25968;&#12398;&#20516;&#12434;&#20986;&#21147;<a class="anchor-link" href="#&#22793;&#25968;&#12398;&#20516;&#12434;&#20986;&#21147;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>printf 関数を使って，文字列を出力する場合は次のように記述する．</p>
+
+<pre><code>printf("標準出力の書式");</code></pre>
+</li>
+<li><p>変数の値を出力する場合には，「標準出力の書式」の後ろにカンマ<code>,</code>をつけて，「式や変数」を続る．</p>
+
+<pre><code>printf("標準出力の書式",式や変数);</code></pre>
+</li>
+<li><p>式や変数が複数ある場合はカンマ<code>,</code>で区切って，「式や変数」を続ける．</p>
+
+<pre><code>printf("標準出力の書式",式や変数1,式や変数2,式や変数3);</code></pre>
+</li>
+<li><p>printf 関数を使って変数の値を出力する場合には<code>%</code>からはじまる「変換指定子」を使う．</p>
+<p>変換指定子の使用例</p>
+<div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %d, %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+<p>変換指定子は「変数の型」によって異なる．</p>
+</li>
+</ul>
+<table>
+<thead><tr>
+<th style="text-align:center">変数の型</th>
+<th style="text-align:center">宣言例</th>
+<th style="text-align:center">画面への出力</th>
+<th style="text-align:center">キーボードからの入力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">整数</td>
+<td style="text-align:center">int  a;</td>
+<td style="text-align:center">printf("%d",a);</td>
+<td style="text-align:center">scanf("%d",&amp;a);</td>
+</tr>
+<tr>
+<td style="text-align:center">実数</td>
+<td style="text-align:center">double  a;</td>
+<td style="text-align:center">printf("%f",a);</td>
+<td style="text-align:center">scanf("%lf",&amp;a);</td>
+</tr>
+<tr>
+<td style="text-align:center">文字(1文字)</td>
+<td style="text-align:center">char  a;</td>
+<td style="text-align:center">printf("%c",a);</td>
+<td style="text-align:center">scanf("%c",&amp;a);</td>
+</tr>
+<tr>
+<td style="text-align:center">文字列</td>
+<td style="text-align:center">char  a[20];</td>
+<td style="text-align:center">printf("%s",a);</td>
+<td style="text-align:center">scanf("%s",a);</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-text/x-csrc"><pre><span></span>// 変換指定子の使用例
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  // 文字
+  char str1;
+  str1 = &#39;A&#39;;
+  printf(&quot;%c\n&quot;, str1);
     
-    // 結果の出力
-    for (int i = 0; i &lt; N; i++) {
-        printf(&quot;student #%d: %f\n&quot;, students[i].id, students[i].score);
-    }
+  char str2[] = &quot;abc&quot;;
+  printf(&quot;%s\n&quot;, str2);    
+
+  // 整数
+  int a, b, c;
+  a = 1;
+  b = 2;
+  c = 4;
+  printf(&quot;%d, %d, %d\n&quot;, a, a+b, c);
+ 
+  // 実数
+  float x;
+  x = 33.333;
+  printf(&quot;%f\n&quot;, x);
+ 
+  return 0;
 }
 </pre></div>
 
@@ -13427,11 +13508,10 @@ int main() {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>student #0: 0.000000
-student #1: 10.000000
-student #2: 20.000000
-student #3: 30.000000
-student #4: 40.000000
+<pre>A
+abc
+1, 3, 4
+33.333000
 </pre>
 </div>
 </div>
@@ -13439,212 +13519,6 @@ student #4: 40.000000
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Atypedef%20struct%20%7B%0A%20%20%20%20int%20id%3B%0A%20%20%20%20double%20score%3B%0A%7D%20student%3B%0A%0A//%20%E9%9D%99%E7%9A%84%E9%85%8D%E5%88%97%E3%81%AE%E5%AE%A3%E8%A8%80%0A%23define%20N%205%0Astudent%20students%5BN%5D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20//%20%E5%80%A4%E3%82%92%E4%BB%A3%E5%85%A5%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20N%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20students%5Bi%5D.id%20%3D%20i%3B%0A%20%20%20%20%20%20%20%20students%5Bi%5D.score%20%3D%20i%20*%2010.0%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20//%20%E7%B5%90%E6%9E%9C%E3%81%AE%E5%87%BA%E5%8A%9B%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20N%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20printf%28%22student%20%23%25d%3A%20%25f%5Cn%22,%20students%5Bi%5D.id,%20students%5Bi%5D.score%29%3B%0A%20%20%20%20%7D%0A%7D%0A&amp;cumulative=false&amp;curInstr=27&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-typedef struct {
-    int id;
-    double score;
-} student;
-
-int main() {
-    // メモリの動的確保
-    int n = 5;
-    student *students = (student*)malloc(n * sizeof(student));
-
-    // 値を代入
-    for (int i = 0; i &lt; n; i++) {
-        students[i].id = i;
-        students[i].score = i * 10.0;
-    }
-
-    // 結果の出力
-    for (int i = 0; i &lt; n; i++) {
-        printf(&quot;student #%d: %f\n&quot;, students[i].id, students[i].score);
-    }
-
-    // メモリの解放
-    free(students);
-}
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>student #0: 0.000000
-student #1: 10.000000
-student #2: 20.000000
-student #3: 30.000000
-student #4: 40.000000
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstdlib.h%3E%0A%0Atypedef%20struct%20%7B%0A%20%20%20%20int%20id%3B%0A%20%20%20%20double%20score%3B%0A%7D%20student%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20//%20%E3%83%A1%E3%83%A2%E3%83%AA%E3%81%AE%E5%8B%95%E7%9A%84%E7%A2%BA%E4%BF%9D%0A%20%20%20%20int%20n%20%3D%205%3B%0A%20%20%20%20student%20*students%20%3D%20%28student*%29malloc%28n%20*%20sizeof%28student%29%29%3B%0A%0A%20%20%20%20//%20%E5%80%A4%E3%82%92%E4%BB%A3%E5%85%A5%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20n%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20students%5Bi%5D.id%20%3D%20i%3B%0A%20%20%20%20%20%20%20%20students%5Bi%5D.score%20%3D%20i%20*%2010.0%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20//%20%E7%B5%90%E6%9E%9C%E3%81%AE%E5%87%BA%E5%8A%9B%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20n%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20printf%28%22student%20%23%25d%3A%20%25f%5Cn%22,%20students%5Bi%5D.id,%20students%5Bi%5D.score%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20//%20%E3%83%A1%E3%83%A2%E3%83%AA%E3%81%AE%E8%A7%A3%E6%94%BE%0A%20%20%20%20free%28students%29%3B%0A%7D%0A&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-typedef struct {
-    char name[32];
-    int *subjects;
-} student;
-
-int main() {
-    student taro;
-    sprintf(taro.name, &quot;Taro&quot;);  // nameを&quot;Taro&quot;にする
-
-    // subjectsのメモリ確保と値の代入
-    int n = 2;
-    taro.subjects = (int*)calloc(n, sizeof(int));
-    taro.subjects[0] = 100;
-    taro.subjects[1] = 80;
-
-    // 結果の出力
-    printf(&quot;Total (%s): %d\n&quot;, taro.name, taro.subjects[0] + taro.subjects[1]);
-
-    // メモリの解放
-    free(taro.subjects);
-}
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Total (Taro): 180
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstdlib.h%3E%0A%0Atypedef%20struct%20%7B%0A%20%20%20%20char%20name%5B10%5D%3B%0A%20%20%20%20int%20*subjects%3B%0A%7D%20student%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20student%20taro%3B%0A%20%20%20%20sprintf%28taro.name,%20%22Taro%22%29%3B%20%20//%20name%E3%82%92%22Taro%22%E3%81%AB%E3%81%99%E3%82%8B%0A%0A%20%20%20%20//%20subjects%E3%81%AE%E3%83%A1%E3%83%A2%E3%83%AA%E7%A2%BA%E4%BF%9D%E3%81%A8%E5%80%A4%E3%81%AE%E4%BB%A3%E5%85%A5%0A%20%20%20%20int%20n%20%3D%202%3B%0A%20%20%20%20taro.subjects%20%3D%20%28int*%29malloc%28n%20*%20sizeof%28int%29%29%3B%0A%20%20%20%20taro.subjects%5B0%5D%20%3D%20100%3B%0A%20%20%20%20taro.subjects%5B1%5D%20%3D%2080%3B%0A%0A%20%20%20%20//%20%E7%B5%90%E6%9E%9C%E3%81%AE%E5%87%BA%E5%8A%9B%0A%20%20%20%20printf%28%22Total%20%28%25s%29%3A%20%25d%5Cn%22,%20taro.name,%20taro.subjects%5B0%5D%20%2B%20taro.subjects%5B1%5D%29%3B%0A%0A%20%20%20%20//%20%E3%83%A1%E3%83%A2%E3%83%AA%E3%81%AE%E8%A7%A3%E6%94%BE%0A%20%20%20%20free%28taro.subjects%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-typedef struct {
-    char name[10];
-    int *subjects;
-} student;
-
-int main() {
-    // 構造体のポインタを準備
-    student taro;
-    student *taro_ptr;
-    taro_ptr = &amp;taro;
-
-    // アクセス方法が値とポインタで異なることに注意
-    sprintf(taro_ptr-&gt;name, &quot;Taro&quot;);  // nameを&quot;Taro&quot;にする
-
-    // subjectsのメモリ確保と値の代入
-    const int n = 2;
-    taro_ptr-&gt;subjects = (int*)malloc(n *sizeof(int));
-    taro_ptr-&gt;subjects[0] = 100;
-    taro_ptr-&gt;subjects[1] = 80;
-
-    // 結果の出力
-    printf(&quot;Total (%s): %d\n&quot;, taro_ptr-&gt;name, taro_ptr-&gt;subjects[0] + taro_ptr-&gt;subjects[1]);
-
-    // メモリの解放
-    free(taro.subjects);
-}
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Total (Taro): 180
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstdlib.h%3E%0A%0Atypedef%20struct%20%7B%0A%20%20%20%20char%20name%5B10%5D%3B%0A%20%20%20%20int%20*subjects%3B%0A%7D%20student%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20//%20%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%92%E6%BA%96%E5%82%99%0A%20%20%20%20student%20taro%3B%0A%20%20%20%20student%20*taro_ptr%3B%0A%20%20%20%20taro_ptr%20%3D%20%26taro%3B%0A%0A%20%20%20%20//%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%96%B9%E6%B3%95%E3%81%8C%E5%80%A4%E3%81%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E6%B3%A8%E6%84%8F%0A%20%20%20%20sprintf%28taro_ptr-%3Ename,%20%22Taro%22%29%3B%20%20//%20name%E3%82%92%22Taro%22%E3%81%AB%E3%81%99%E3%82%8B%0A%0A%20%20%20%20//%20subjects%E3%81%AE%E3%83%A1%E3%83%A2%E3%83%AA%E7%A2%BA%E4%BF%9D%E3%81%A8%E5%80%A4%E3%81%AE%E4%BB%A3%E5%85%A5%0A%20%20%20%20const%20int%20n%20%3D%202%3B%0A%20%20%20%20taro_ptr-%3Esubjects%20%3D%20%28int*%29malloc%28n%20*sizeof%28int%29%29%3B%0A%20%20%20%20taro_ptr-%3Esubjects%5B0%5D%20%3D%20100%3B%0A%20%20%20%20taro_ptr-%3Esubjects%5B1%5D%20%3D%2080%3B%0A%0A%20%20%20%20//%20%E7%B5%90%E6%9E%9C%E3%81%AE%E5%87%BA%E5%8A%9B%0A%20%20%20%20printf%28%22Total%20%28%25s%29%3A%20%25d%5Cn%22,%20taro_ptr-%3Ename,%20taro_ptr-%3Esubjects%5B0%5D%20%2B%20taro_ptr-%3Esubjects%5B1%5D%29%3B%0A%0A%20%20%20%20//%20%E3%83%A1%E3%83%A2%E3%83%AA%E3%81%AE%E8%A7%A3%E6%94%BE%0A%20%20%20%20free%28taro.subjects%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
