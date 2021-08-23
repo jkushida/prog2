@@ -13022,6 +13022,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13089,7 +13102,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "263.594px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13104,26 +13117,24 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#27083;&#36896;&#21270;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;">&#27083;&#36896;&#21270;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;<a class="anchor-link" href="#&#27083;&#36896;&#21270;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;">&#182;</a></h1><p>C言語では，単純なプログラムは<strong>順次構造</strong>であり，処理の流れが上から下へ単に流れるだけである．</p>
+<h1 id="&#27083;&#36896;&#21270;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;">&#27083;&#36896;&#21270;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;<a class="anchor-link" href="#&#27083;&#36896;&#21270;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;">&#182;</a></h1><p>C言語の単純なプログラムは<strong>順次構造</strong>であり，処理の流れが上から下へ単に流れるだけである．</p>
 <p>C言語では，順次構造以外に，どちらか一方の処理を選ぶ<strong>選択構造</strong>と，同じ処理を繰り返す<strong>反復構造</strong>を用いることができる．</p>
 <p>この，順次，選択，反復の３つの構造を，<strong>制御基本構造</strong>と呼ぶ．</p>
-<h2 id="&#38918;&#27425;&#27083;&#36896;">&#38918;&#27425;&#27083;&#36896;<a class="anchor-link" href="#&#38918;&#27425;&#27083;&#36896;">&#182;</a></h2>
-<pre><code>- 処理が現れた順に実行する形式であり，特に制御の流れを変える命令はない．
-
-</code></pre>
+<h2 id="&#38918;&#27425;&#27083;&#36896;">&#38918;&#27425;&#27083;&#36896;<a class="anchor-link" href="#&#38918;&#27425;&#27083;&#36896;">&#182;</a></h2><ul>
+<li>処理が現れた順に実行する形式であり，特に制御の流れを変える命令はない．</li>
+</ul>
 <p><img 　src="./fig/順次構造.png" width="120"></p>
-<h2 id="&#36984;&#25246;&#27083;&#36896;">&#36984;&#25246;&#27083;&#36896;<a class="anchor-link" href="#&#36984;&#25246;&#27083;&#36896;">&#182;</a></h2>
-<pre><code>- 条件により，実行する文が異なる構造である．
-
-- C言語には，if文と switch文がある．
-
-</code></pre>
+<h2 id="&#36984;&#25246;&#27083;&#36896;">&#36984;&#25246;&#27083;&#36896;<a class="anchor-link" href="#&#36984;&#25246;&#27083;&#36896;">&#182;</a></h2><ul>
+<li>条件により，実行する文が異なる構造である．</li>
+<li>C言語には，<code>if</code>文と <code>switch</code>文がある．</li>
+</ul>
 <p><img 　src="./fig/選択構造.png" width="400"></p>
-<h2 id="&#21453;&#24489;&#27083;&#36896;">&#21453;&#24489;&#27083;&#36896;<a class="anchor-link" href="#&#21453;&#24489;&#27083;&#36896;">&#182;</a></h2>
-<pre><code>- 同じ文を繰り返す構造である．
-- C言語には，for文，while文，do-while文がある．
-
-</code></pre>
+<h2 id="&#21453;&#24489;&#27083;&#36896;">&#21453;&#24489;&#27083;&#36896;<a class="anchor-link" href="#&#21453;&#24489;&#27083;&#36896;">&#182;</a></h2><ul>
+<li><p>同じ文を繰り返す構造である．</p>
+</li>
+<li><p>C言語には，<code>for</code>文，while<code>文</code>，<code>do-while</code>文がある．</p>
+</li>
+</ul>
 <p><img 　src="./fig/反復構造.png" width="100"></p>
 
 </div>
@@ -13132,8 +13143,12 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="C&#35328;&#35486;&#12398;&#21046;&#24481;&#27083;&#36896;">C&#35328;&#35486;&#12398;&#21046;&#24481;&#27083;&#36896;<a class="anchor-link" href="#C&#35328;&#35486;&#12398;&#21046;&#24481;&#27083;&#36896;">&#182;</a></h1><p>C言語では，上述の制御構造を実現する制御文が用意されている．</p>
-<p>また，反復処理をサポートする制御文も用意されている．</p>
+<h1 id="C&#35328;&#35486;&#12398;&#21046;&#24481;&#27083;&#36896;">C&#35328;&#35486;&#12398;&#21046;&#24481;&#27083;&#36896;<a class="anchor-link" href="#C&#35328;&#35486;&#12398;&#21046;&#24481;&#27083;&#36896;">&#182;</a></h1><ul>
+<li><p>C言語では，上述の制御構造を実現する<strong>制御文</strong>が用意されている．</p>
+</li>
+<li><p>また，反復処理をサポートする制御文も用意されている．</p>
+</li>
+</ul>
 <BR>
 
 <p><img 　src="./fig/C言語の制御構造.png" width="600"></p>
