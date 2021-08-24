@@ -1,29 +1,30 @@
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-char *func(void);
+void func(int n);
+
+int m = 100; //グローバル変数
 
 int main(void)
 {
-    char *y;
-    
-    y = func(); // 関数からアドレスを受け取る
-    printf("(2) %s [%p]\n", y, y);
-    
+    int *ip;        // int型のポインタipを宣言
+    int i = 1, n = 4, m[4] = {0, 1, 2, 3};
+
+    ip = (int *)malloc(n * sizeof(int));  // メモリ領域の確保
+
+    free(ip);       // 確保したメモリ領域の解放
+
+    func(i);
+
+    for(i=0; i<4; i++)
+        printf("%d ",m[i]);
+    printf("\n");
+
     return 0;
 }
 
-char *func(void)
+void func(int n)
 {
-    char *x, str[5] = "test";
-    
-    // strlen(str)で文字列strの長さを取得
-    x = malloc(strlen(str) + 1);
-    
-    strcpy(x, str);   // strの内容をxにコピー
-    printf("(1) %s [%p]\n", x, x);
-    
-    // xの先頭アドレスを返す
-    return x;
+    int m = 3;
+    n = m;
 }
