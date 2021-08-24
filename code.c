@@ -1,29 +1,30 @@
 #include <stdio.h>
-int main()
+#include <stdlib.h>
+
+void func(int n);
+
+int m = 100; //グローバル変数
+
+int main(void)
 {
-    int i, j, a[3][4] = {{0, 1, 2, 3},{5, 6, 7, 8},{10, 11, 12, 13}};
-    // ポインタpの配列
-    int *p1[3];
-    // アドレスを設定
-    for (i =0; i<3; i++)
-        p1[i] = a[i];
+    int *ip;        // int型のポインタipを宣言
+    int i = 1, n = 4, m[4] = {0, 1, 2, 3};
     
-    // ポインタp2を宣言しアドレスを設定
-    int *p2 = a[0];
+    ip = (int *)malloc(n * sizeof(int));  // メモリ領域の確保
+    
+    free(ip);       // 確保したメモリ領域の解放
+    
+    func(i);
+    
+    for(i=0; i<4; i++)
+        printf("%d ",m[i]);
+    printf("\n");
+    
+    return 0;
+}
 
-    printf("ポインタを使った間接参照1\n");
-    for (i =0; i<3; i++){
-        for (j =0; j<4; j++)
-            printf("%d ", *(p1[i]++));
-        printf("\n");
-    }
-
-    printf("ポインタを使った間接参照2\n");
-    for (i =0; i<3; i++){
-        for (j =0; j<4; j++)
-            printf("%d ", *(p2++));
-        printf("\n");
-    }
-
-    return (0);
+void func(int n)
+{
+    int m = 3;
+    n = m;
 }
