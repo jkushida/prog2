@@ -1,17 +1,18 @@
-// 構造体の使用例
 #include <stdio.h>
-
-struct student{      // 学生情報
-  int no;                   // 学生番号
-  char name[10];   // 氏名
-  double average;  // 平均点
-};
-
-int main()
+#include <stdlib.h>
+int main(void)
 {
-    struct student seito1 = {5, "Yamada", 85.3};
+    FILE * fp = NULL;
 
-    // 構造体の持つ情報を表示
-    printf("学生番号: %d,  氏名: %s,  平均点: %f\n",seito1.no, seito1.name, seito1.average);
+    fp = fopen("output.txt", "w");
+    if(fp == NULL){  // エラー処理
+        printf("ファイルオープン失敗\n");
+        exit(EXIT_FAILURE);  // エラーなら強制終了
+    }
+
+    fputs("Hello\n", fp);   // オープンしたファイルに書き込み
+
+    fclose(fp);
+
     return 0;
 }
