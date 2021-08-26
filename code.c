@@ -1,18 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
-int main(void)
+
+int main()
 {
-    FILE * fp = NULL;
-
-    fp = fopen("output.txt", "w");
-    if(fp == NULL){  // エラー処理
-        printf("ファイルオープン失敗\n");
-        exit(EXIT_FAILURE);  // エラーなら強制終了
-    }
-
-    fputs("Hello\n", fp);   // オープンしたファイルに書き込み
-
-    fclose(fp);
-
+    int a[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+    
+    printf("a[0][0] = %d\n", a[0][0]);
+    printf("a[1][0] = %d\n", a[1][0]);
+    printf("a[2][3] = %d\n", a[2][3]);
+    
     return 0;
 }
