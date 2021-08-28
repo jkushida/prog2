@@ -1,12 +1,21 @@
 #include <stdio.h>
-
-int main()
+#include <math.h>
+int main(void)
 {
-    int a[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
-    
-    printf("a[0][0] = %d\n", a[0][0]);
-    printf("a[1][0] = %d\n", a[1][0]);
-    printf("a[2][3] = %d\n", a[2][3]);
-    
+    int n = 0;
+    int M = 1; // 初期の細胞数
+    int limit = 1E+5;
+
+    while (1){
+        
+        M = M * 5;
+        n++;
+        printf("%d分後のM=%d\n",n,M);
+        
+        if(M>limit)
+            break;
+    }
+ 
+    printf("n = %d\n",n);
     return 0;
 }
