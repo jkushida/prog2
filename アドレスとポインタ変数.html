@@ -14017,95 +14017,27 @@ p[2] = 0x10c5c1f49</code></pre>
 </pre></div>
 <p>は，ポインタを使って複数の文字列を扱い，<code>p</code>は文字列を指している．</p>
 <p>つまり，<code>p[0]</code>,<code>p[1]</code>,<code>p[2]</code>には，それぞれ文字列の先頭アドレスが代入されている．</p>
-<p><img style="float: left;" src="./fig/ポインタ配列.png" width="360"></p>
+<p><img style="float: left;" src="./fig/ポインタ配列.png" width="350"></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-text/x-csrc"><pre><span></span>■ 文字列の表示
-
-putsは文字列を出力する関数であり，引数には出力する文字列を指定する．
-
-`配列名[行]`で，行の先頭のアドレスを示す．
-
-```c
-    for (i =0; i&lt;3; i++)
-        puts(str[i]);　　　// 配列
-```
-
-ポインタ配列`p`の各要素には文字列のアドレスが格納されている．
-```c
-    for (i =0; i&lt;3; i++)
-        puts(p[i]);  // ポインタ
-```    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>■ 文字列の表示</p>
+<p>putsは文字列を出力する関数であり，引数には出力する文字列を指定する．</p>
+<p><code>配列名[行]</code>で，行の先頭のアドレスを示す．</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">puts</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>　　　<span class="c1">// 配列</span>
+</pre></div>
+<p>ポインタ配列<code>p</code>の各要素には文字列のアドレスが格納されている．</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">puts</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>  <span class="c1">// ポインタ</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:4:1: error: non-ASCII characters are not allowed outside of literals and identifiers
-■ 文字列の表示
-^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:6:47: warning: treating Unicode character &lt;U+FF0C&gt; as identifier character rather than as &#39;,&#39; symbol [-Wunicode-homoglyph]
-putsは文字列を出力する関数であり，引数には出力する文字列を指定する．
-                                ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:6:98: warning: treating Unicode character &lt;U+FF0E&gt; as identifier character rather than as &#39;.&#39; symbol [-Wunicode-homoglyph]
-putsは文字列を出力する関数であり，引数には出力する文字列を指定する．
-                                                                  ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:4:5: error: use of undeclared identifier &#39;文字列の表示&#39;
-■ 文字列の表示
-  ^
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:8:20: warning: treating Unicode character &lt;U+FF0C&gt; as identifier character rather than as &#39;,&#39; symbol [-Wunicode-homoglyph]
-`配列名[行]`で，行の先頭のアドレスを示す．
-              ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:8:59: warning: treating Unicode character &lt;U+FF0E&gt; as identifier character rather than as &#39;.&#39; symbol [-Wunicode-homoglyph]
-`配列名[行]`で，行の先頭のアドレスを示す．
-                                        ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:12:22: warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-        puts(str[i]);　　　// 配列
-                     ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:12:25: warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-        puts(str[i]);　　　// 配列
-                       ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:12:28: warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-        puts(str[i]);　　　// 配列
-                         ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:13:1: error: expected expression
-```
-^
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:15:88: warning: treating Unicode character &lt;U+FF0E&gt; as identifier character rather than as &#39;.&#39; symbol [-Wunicode-homoglyph]
-ポインタ配列`p`の各要素には文字列のアドレスが格納されている．
-                                                           ^~
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:19:1: error: expected expression
-```    
-^
-/var/folders/17/1fkqsg691_3flnsv7g5_wrz80000gn/T/tmpgjn8u0cv.c:22:2: warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-9 warnings and 4 errors generated.
-[C kernel] GCC exited with code 1, the executable will not be executed</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
