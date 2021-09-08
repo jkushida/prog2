@@ -1,21 +1,18 @@
 #include <stdio.h>
-#include <math.h>
-int main(void)
-{
-    int n = 0;
-    int M = 1; // 初期の細胞数
-    int limit = 1E+5;
 
-    while (1){
-        
-        M = M * 5;
-        n++;
-        printf("%d分後のM=%d\n",n,M);
-        
-        if(M>limit)
-            break;
+int main(void){
+  int num = 20;
+  int i = 1;
+
+  printf("数値=%dの約数を求める\n", num);
+
+  do{
+    if (num % i == 0){
+      printf("約数=%d\n", i);
     }
- 
-    printf("n = %d\n",n);
-    return 0;
+
+    i++;
+  }while (i <= num);
+
+  return 0;
 }
