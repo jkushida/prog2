@@ -13614,11 +13614,11 @@ pの指しているアドレス = 0x308cba568</code></pre>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>                        <span class="c1">// ポインタの宣言</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>                  <span class="c1">// ポインタの宣言</span>
     <span class="kt">char</span> <span class="n">tmp</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;ABC&quot;</span><span class="p">;</span>  <span class="c1">//文字列の宣言</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>                      <span class="c1">// pにtmpのアドレスを設定 (p=&amp;tmp[0]; と書いても同様)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>                <span class="c1">// pにtmpのアドレスを設定 (p=&amp;tmp[0]; と書いても同様)</span>
 
-    <span class="n">puts</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>                      <span class="c1">// 文字列を出力する関数</span>
+    <span class="n">puts</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>                <span class="c1">// 文字列を出力する関数</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -13872,15 +13872,15 @@ b[2] = 99     address = 0x305023536</code></pre>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
     <span class="kt">char</span> <span class="n">st</span><span class="p">[]</span><span class="o">=</span> <span class="s">&quot;Summer&quot;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>                             <span class="c1">// ポインタp1,p2の宣言</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>                    <span class="c1">// ポインタp1,p2の宣言</span>
 
-    <span class="n">p1</span><span class="o">=</span> <span class="n">st</span><span class="p">;</span>                                         <span class="c1">// p1にstのアドレスを設定 (p1=&amp;st[0]; と書いても同様)</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p1</span><span class="p">);</span>                      <span class="c1">// p1によるstの表示 （ポインタの値を変えずに参照）</span>
+    <span class="n">p1</span><span class="o">=</span> <span class="n">st</span><span class="p">;</span>                                 <span class="c1">// p1にstのアドレスを設定 (p1=&amp;st[0]; と書いても同様)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p1</span><span class="p">);</span>              <span class="c1">// p1によるstの表示 （ポインタの値を変えずに参照）</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">p1</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>              
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">p1</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
 
-    <span class="n">p2</span><span class="o">=</span> <span class="n">st</span><span class="p">;</span>                                        <span class="c1">// p2にstのアドレスを設定 (p2=&amp;st[0]; と書いても同様)</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">);</span>                    <span class="c1">// p2によるstの表示 (ポインタの値を更新して参照)</span>
+    <span class="n">p2</span><span class="o">=</span> <span class="n">st</span><span class="p">;</span>                                <span class="c1">// p2にstのアドレスを設定 (p2=&amp;st[0]; と書いても同様)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">);</span>            <span class="c1">// p2によるstの表示 (ポインタの値を更新して参照)</span>
     <span class="n">p2</span><span class="o">++</span><span class="p">;</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">);</span>
     <span class="n">p2</span><span class="o">++</span><span class="p">;</span>
