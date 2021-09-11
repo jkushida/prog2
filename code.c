@@ -1,18 +1,18 @@
+// c1-3.c 解答
 #include <stdio.h>
 
-int main(void){
-  int num = 20;
-  int i = 1;
-
-  printf("数値=%dの約数を求める\n", num);
-
-  do{
-    if (num % i == 0){
-      printf("約数=%d\n", i);
+int main(void)
+{
+    int array[5] = { 1, 2, 3, 4, 5 };
+    int i, *p[5];
+    
+    for(i = 0; i < 5; ++i ){
+        p[i] =&array[4-i];
     }
-
-    i++;
-  }while (i <= num);
-
-  return 0;
+    
+    for(i = 0; i < 5; ++i ){
+        printf( "%d ", *p );
+    }
+    printf( "\n" );
+    return 0;
 }
