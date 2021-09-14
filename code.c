@@ -1,18 +1,13 @@
-// c1-3.c 解答
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void)
-{
-    int array[5] = { 1, 2, 3, 4, 5 };
-    int i, *p[5];
+int main(int argc, char *argv[]){
+    int i;
+    int n;
     
-    for(i = 0; i < 5; ++i ){
-        p[i] =&array[4-i];
+    for(i=1;i<argc;i++){
+        n=atoi(argv[i]);
+        printf("%d\n",n*2);
     }
-    
-    for(i = 0; i < 5; ++i ){
-        printf( "%d ", *p );
-    }
-    printf( "\n" );
     return 0;
 }
