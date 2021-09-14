@@ -13229,7 +13229,8 @@ sizeof(vc)  = 1</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>以下のsample2.cは<code>%p</code>で変数のアドレスを表示するが，<span style="color: red; ">アドレスの値は実行環境により変化する．</span></p>
+<p>以下のsample2.cは変数のアドレスを確認するプログラムである．</p>
+<p><code>%p</code>で変数のアドレスを表示するが，<span style="color: red; ">アドレスの値は実行環境により変化する．</span></p>
 <hr>
 <p>sample2.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -13498,13 +13499,6 @@ HI
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>ここでは，以下のsample5.cをもとにポインタの使い方を説明する．</p>
 <p>ポインタは必ず，宣言，アドレスの設定，参照，の３ステップで用いる．</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>sample5.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -13576,8 +13570,8 @@ pの指しているアドレス = 0x308cba568</code></pre>
 <p>と書くことができる．</p>
 <p>■ <strong>参照</strong></p>
 <p>参照は，</p>
-<div class="highlight"><pre><span></span><span class="o">*</span><span class="err">ポインタ名</span>
-</pre></div>
+
+<pre><code>*ポインタ名</code></pre>
 <p>で行う．</p>
 <ul>
 <li><p>この<code>*</code>は，間接参照演算子と呼ばれ，<span style="color: red; ">「ポインタの指すアドレスの中身」</span>を表す．</p>
