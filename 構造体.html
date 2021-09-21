@@ -13661,8 +13661,9 @@ error: variable has incomplete type 'struct student'</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
 <p>以下のsample7.cは，構造体配列を用いたプログラムの例である．</p>
+<hr>
+<p>sample7.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>
@@ -14146,6 +14147,61 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#12509;&#12452;&#12531;&#12479;&#12434;&#12513;&#12531;&#12496;&#22793;&#25968;&#12392;&#12377;&#12427;&#27083;&#36896;&#20307;">&#12509;&#12452;&#12531;&#12479;&#12434;&#12513;&#12531;&#12496;&#22793;&#25968;&#12392;&#12377;&#12427;&#27083;&#36896;&#20307;<a class="anchor-link" href="#&#12509;&#12452;&#12531;&#12479;&#12434;&#12513;&#12531;&#12496;&#22793;&#25968;&#12392;&#12377;&#12427;&#27083;&#36896;&#20307;">&#182;</a></h2><p>構造体では, 任意の型のまとまりを定義できるため，構造体の中にポインタを入れることも可能である．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>以下のsample13.cでは, 構造体のメンバにint型のポインタ変数が含まれている．</p>
+<p>このポインタにはmalloc関数で確保したメモリ領域のアドレスが代入される．</p>
+<hr>
+<p>sample13.c</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>     
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>    
+    <span class="kt">int</span> <span class="o">*</span><span class="n">score</span><span class="p">;</span>   
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="nc">student</span> <span class="n">sei</span><span class="p">;</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">sei</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Satou&quot;</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">sei</span><span class="p">.</span><span class="n">score</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>      <span class="c1">// メモリ領域の確保</span>
+    <span class="n">sei</span><span class="p">.</span><span class="n">score</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">70</span><span class="p">;</span>
+    <span class="n">sei</span><span class="p">.</span><span class="n">score</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;氏名: %s,  score[0]: %d, score[1]: %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sei</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">sei</span><span class="p">.</span><span class="n">score</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sei</span><span class="p">.</span><span class="n">score</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>氏名: Satou,  score[0]: 70, score[1]: 80</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstdlib.h%3E%0A%23include%20%3Cstring.h%3E%0A%0Astruct%20student%7B%20%20%20%20%20%0A%20%20%20%20char%20name%5B10%5D%3B%20%20%20%20%0A%20%20%20%20int%20*score%3B%20%20%20%0A%7D%3B%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20struct%20student%20sei%3B%0A%20%20%20%20strcpy%28sei.name,%20%22Satou%22%29%3B%0A%0A%20%20%20%20int%20n%20%3D%202%3B%0A%20%20%20%20sei.score%20%3D%20%28int%20*%29malloc%28n%20*%20sizeof%28int%29%29%3B%20%20%20%20%20%20//%20%E3%83%A1%E3%83%A2%E3%83%AA%E9%A0%98%E5%9F%9F%E3%81%AE%E7%A2%BA%E4%BF%9D%0A%20%20%20%20sei.score%5B0%5D%20%3D%2070%3B%0A%20%20%20%20sei.score%5B1%5D%20%3D%2080%3B%0A%0A%20%20%20%20printf%28%22%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20score%5B0%5D%3A%20%25d,%20score%5B1%5D%3A%20%25d%20%5Cn%22,%20sei.name,%20sei.score%5B0%5D,%20sei.score%5B1%5D%29%3B%0A%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#27083;&#36896;&#20307;&#12392;&#38306;&#25968;">&#27083;&#36896;&#20307;&#12392;&#38306;&#25968;<a class="anchor-link" href="#&#27083;&#36896;&#20307;&#12392;&#38306;&#25968;">&#182;</a></h1><p>構造体も，通常の変数のように，値渡しとアドレス渡しの２つの方法で関数の引数として指定できる．</p>
 <p>以下は，構造体の値渡しと構造体のアドレス渡しのプログラムである．</p>
 
@@ -14166,7 +14222,7 @@ no = 4, value = 4.23</code></pre>
 <li>構造体の値渡しのプログラムの例</li>
 </ul>
 <hr>
-<p>sample13.c</p>
+<p>sample14.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>      <span class="c1">// 学生情報</span>
@@ -14236,7 +14292,7 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;1">- &#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;1<a class="anchor-link" href="#--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;1">&#182;</a></h2><p>sample14.c</p>
+<h2 id="--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;1">- &#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;1<a class="anchor-link" href="#--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;1">&#182;</a></h2><p>sample15.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>        <span class="c1">// 学生情報</span>
@@ -14299,7 +14355,7 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;2">- &#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;2<a class="anchor-link" href="#--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;2">&#182;</a></h2><p>sample15.c</p>
+<h2 id="--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;2">- &#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;2<a class="anchor-link" href="#--&#27083;&#36896;&#20307;&#12398;&#12450;&#12489;&#12524;&#12473;&#28193;&#12375;&#12398;&#20363;2">&#182;</a></h2><p>sample16.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>
@@ -14372,7 +14428,7 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>sample15.cでは，<code>func_c</code>関数内で２通りの方法で構造体配列の中身を表示している．</p>
+<p>sample16.cでは，<code>func_c</code>関数内で２通りの方法で構造体配列の中身を表示している．</p>
 
 </div>
 </div>
@@ -14390,9 +14446,9 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>以下のsample16.cは，<code>func</code>関数で構造体のオブジェクトを宣言し，値を代入したあとに，<code>main</code>関数に返却している．</p>
+<p>以下のsample17.cは，<code>func</code>関数で構造体のオブジェクトを宣言し，値を代入したあとに，<code>main</code>関数に返却している．</p>
 <hr>
-<p>sample16.c</p>
+<p>sample17.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
@@ -14458,7 +14514,7 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>また，次のsample17.cでは，関数内で複数の構造体を編集している．</p>
+<p>また，次のsample18.cでは，関数内で複数の構造体を編集している．</p>
 
 </div>
 </div>
@@ -14467,7 +14523,7 @@ no = 4, value = 4.23</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>sample17.c</p>
+<p>sample18.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
@@ -14538,6 +14594,61 @@ no = 4, value = 4.23</code></pre>
 <p>このコードでは，<code>main</code>関数で構造体の配列<code>sei[N]</code>を用意し，その先頭アドレスを引数で渡している．</p>
 <p><code>func2</code>関数では新たに構造体の配列<code>s[N]</code>を用意し，<code>s[N]</code>の情報をポインタを使って<code>sei[N]</code>にコピーしている．</p>
 <p><img style="float: left;" src="./fig/返却値3.png" width="500"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#27083;&#36896;&#20307;&#12434;&#21205;&#30340;&#12395;&#30906;&#20445;&#12377;&#12427;&#38306;&#25968;">&#27083;&#36896;&#20307;&#12434;&#21205;&#30340;&#12395;&#30906;&#20445;&#12377;&#12427;&#38306;&#25968;<a class="anchor-link" href="#&#27083;&#36896;&#20307;&#12434;&#21205;&#30340;&#12395;&#30906;&#20445;&#12377;&#12427;&#38306;&#25968;">&#182;</a></h2><p>以下のsample19.cでは, 関数内で構造体のためのメモリ領域を動的に確保し, そのアドレスをmain関数に返している．</p>
+<hr>
+<p>sample19.c</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>      <span class="c1">// 学生情報</span>
+    <span class="kt">int</span> <span class="n">no</span><span class="p">;</span>           <span class="c1">// 学生番号</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>    <span class="c1">// 氏名</span>
+    <span class="kt">double</span> <span class="n">average</span><span class="p">;</span>   <span class="c1">// 平均点</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="nc">student</span> <span class="o">*</span><span class="n">func</span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="nc">student</span> <span class="o">*</span><span class="n">sei</span><span class="p">;</span>
+
+    <span class="n">sei</span> <span class="o">=</span> <span class="n">func</span><span class="p">();</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;学生番号: %d,  氏名: %s,  平均点: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">sei</span><span class="o">-&gt;</span><span class="n">no</span><span class="p">,</span> <span class="n">sei</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">sei</span><span class="o">-&gt;</span><span class="n">average</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">student</span> <span class="o">*</span><span class="n">func</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="nc">student</span> <span class="o">*</span><span class="n">sei</span><span class="p">;</span>
+    <span class="n">sei</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="nc">student</span><span class="p">));</span>  <span class="c1">// 構造体のためのメモリ領域を動的に確保</span>
+
+    <span class="n">sei</span><span class="o">-&gt;</span><span class="n">no</span> <span class="o">=</span> <span class="mi">1001</span><span class="p">;</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">sei</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Satou&quot;</span><span class="p">);</span>
+    <span class="n">sei</span><span class="o">-&gt;</span><span class="n">average</span> <span class="o">=</span> <span class="mf">35.3</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">sei</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>学生番号: 1001,  氏名: Satou,  平均点: 35.300000</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstdlib.h%3E%0A%23include%20%3Cstring.h%3E%0A%0Astruct%20student%7B%20%20%20%20%20%20//%20%E5%AD%A6%E7%94%9F%E6%83%85%E5%A0%B1%0A%20%20%20%20int%20no%3B%20%20%20%20%20%20%20%20%20%20%20//%20%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%0A%20%20%20%20char%20name%5B10%5D%3B%20%20%20%20//%20%E6%B0%8F%E5%90%8D%0A%20%20%20%20double%20average%3B%20%20%20//%20%E5%B9%B3%E5%9D%87%E7%82%B9%0A%7D%3B%0A%0Astruct%20student%20*func%28%29%3B%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20struct%20student%20*sei%3B%0A%20%20%20%20%0A%20%20%20%20sei%20%3D%20func%28%29%3B%0A%20%20%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%20%25d,%20%20%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20%E5%B9%B3%E5%9D%87%E7%82%B9%3A%20%25f%5Cn%22,sei-%3Eno,%20sei-%3Ename,%20sei-%3Eaverage%29%3B%0A%0A%20%20%20%20return%20%280%29%3B%0A%7D%0A%0Astruct%20student%20*func%28%29%0A%7B%0A%20%20%20%20struct%20student%20*sei%3B%0A%20%20%20%20sei%20%3D%20malloc%28sizeof%28struct%20student%29%29%3B%20%20//%20%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%A1%E3%83%A2%E3%83%AA%E9%A0%98%E5%9F%9F%E3%82%92%E5%8B%95%E7%9A%84%E3%81%AB%E7%A2%BA%E4%BF%9D%0A%0A%20%20%20%20sei-%3Eno%20%3D%201001%3B%0A%20%20%20%20strcpy%28sei-%3Ename,%20%22Satou%22%29%3B%0A%20%20%20%20sei-%3Eaverage%20%3D%2035.3%3B%0A%20%20%20%20return%20sei%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>
