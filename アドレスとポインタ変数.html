@@ -1154,7 +1154,6 @@ img {
         border-bottom: none;
         border-left: none;
     }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13135,7 +13134,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>以下のコードは，各型のサイズを確認するためのコードである．</p>
+<p>以下のsample1.cは，各型のサイズを確認するためのコードである．</p>
 <p><code>sizeof</code> はデータサイズ（バイト数）を調べるための演算子である．</p>
 
 </div>
@@ -13197,14 +13196,14 @@ sizeof(vc)  = 1</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>変数の宣言を意味する，</p>
+<p>つまり，　変数の宣言を意味する，</p>
 <div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </pre></div>
 <p>は，「メモリ上のあるアドレスに，<code>変数a</code>という領域を確保し，その領域に 10 を代入する」
 という処理となる．</p>
 <p><img src="./fig/アドレス2.png" width="400"></p>
-<p>また，<code>&amp;</code> は変数が割り当てられているメモリのアドレスを得る演算子であり，<strong>アドレス演算子</strong>と呼ばれる．</p>
-<p>図のように変数 <code>a</code> が 1000番地に割り当てられていたとすると <code>&amp;a</code> の値は 1000 となる．</p>
+<p>ここで，<code>&amp;</code> は変数が割り当てられているメモリのアドレスを得る演算子であり，<strong>アドレス演算子</strong>と呼ばれる．</p>
+<p>例えば, 図のように変数 <code>a</code> が 1000番地に割り当てられていたとすると <code>&amp;a</code> の値は 1000 となる．</p>
 <table>
 <thead><tr>
 <th style="text-align:center">表現</th>
@@ -13880,7 +13879,7 @@ b[2] = 99     address = 0x305023536</code></pre>
     <span class="n">p2</span><span class="o">++</span><span class="p">;</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">);</span>   
 
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 <hr>
@@ -13902,7 +13901,7 @@ Sum</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%7B%0A%20%20%20%20char%20st%5B%5D%3D%20%22Summer%22%3B%0A%20%20%20%20char%20*p1,%20*p2%3B%20%20%20%20%20%20%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp1,p2%E3%81%AE%E5%AE%A3%E8%A8%80%0A%0A%20%20%20%20p1%3D%20st%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20p1%E3%81%ABst%E3%81%AE%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%20%28p1%3D%26st%5B0%5D%3B%20%E3%81%A8%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%82%E5%90%8C%E6%A7%98%29%0A%20%20%20%20printf%28%22%25c%22,%20*p1%29%3B%20%20%20%20//%20p1%E3%81%AB%E3%82%88%E3%82%8Bst%E3%81%AE%E8%A1%A8%E7%A4%BA%20%EF%BC%88%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%AE%E5%80%A4%E3%82%92%E5%A4%89%E3%81%88%E3%81%9A%E3%81%AB%E5%8F%82%E7%85%A7%EF%BC%89%0A%20%20%20%20printf%28%22%25c%22,%20*%28p1%2B1%29%29%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20printf%28%22%25c%5Cn%22,%20*%28p1%2B2%29%29%3B%0A%0A%20%20%20%20p2%3D%20st%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20p2%E3%81%ABst%E3%81%AE%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%20%28p2%3D%26st%5B0%5D%3B%20%E3%81%A8%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%82%E5%90%8C%E6%A7%98%29%0A%20%20%20%20printf%28%22%25c%22,%20*p2%29%3B%20%20%20%20//%20p2%E3%81%AB%E3%82%88%E3%82%8Bst%E3%81%AE%E8%A1%A8%E7%A4%BA%20%28%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%AE%E5%80%A4%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%97%E3%81%A6%E5%8F%82%E7%85%A7%29%0A%20%20%20%20p2%2B%2B%3B%0A%20%20%20%20printf%28%22%25c%22,%20*p2%29%3B%0A%20%20%20%20p2%2B%2B%3B%0A%20%20%20%20printf%28%22%25c%5Cn%22,%20*p2%29%3B%20%20%20%0A%0Areturn%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%7B%0A%20%20%20%20char%20st%5B%5D%3D%20%22Summer%22%3B%0A%20%20%20%20char%20*p1,%20*p2%3B%20%20%20%20%20%20%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp1,p2%E3%81%AE%E5%AE%A3%E8%A8%80%0A%0A%20%20%20%20p1%3D%20st%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20p1%E3%81%ABst%E3%81%AE%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%20%28p1%3D%26st%5B0%5D%3B%20%E3%81%A8%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%82%E5%90%8C%E6%A7%98%29%0A%20%20%20%20printf%28%22%25c%22,%20*p1%29%3B%20%20%20%20//%20p1%E3%81%AB%E3%82%88%E3%82%8Bst%E3%81%AE%E8%A1%A8%E7%A4%BA%20%EF%BC%88%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%AE%E5%80%A4%E3%82%92%E5%A4%89%E3%81%88%E3%81%9A%E3%81%AB%E5%8F%82%E7%85%A7%EF%BC%89%0A%20%20%20%20printf%28%22%25c%22,%20*%28p1%2B1%29%29%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20printf%28%22%25c%5Cn%22,%20*%28p1%2B2%29%29%3B%0A%0A%20%20%20%20p2%3D%20st%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20p2%E3%81%ABst%E3%81%AE%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%20%28p2%3D%26st%5B0%5D%3B%20%E3%81%A8%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%82%E5%90%8C%E6%A7%98%29%0A%20%20%20%20printf%28%22%25c%22,%20*p2%29%3B%20%20%20%20//%20p2%E3%81%AB%E3%82%88%E3%82%8Bst%E3%81%AE%E8%A1%A8%E7%A4%BA%20%28%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%AE%E5%80%A4%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%97%E3%81%A6%E5%8F%82%E7%85%A7%29%0A%20%20%20%20p2%2B%2B%3B%0A%20%20%20%20printf%28%22%25c%22,%20*p2%29%3B%0A%20%20%20%20p2%2B%2B%3B%0A%20%20%20%20printf%28%22%25c%5Cn%22,%20*p2%29%3B%20%20%20%0A%0A%20%20%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>
@@ -14012,7 +14011,7 @@ p[2] = 0x10c5c1f49</code></pre>
 </pre></div>
 <p>は，ポインタを使って複数の文字列を扱い，<code>p</code>は文字列を指している．</p>
 <p>つまり，<code>p[0]</code>,<code>p[1]</code>,<code>p[2]</code>には，それぞれ文字列の先頭アドレスが代入されている．</p>
-<p><img style="float: left;" src="./fig/pointer_array.png" width="400"></p>
+<p><img style="float: left;" src="./fig/pointer_array.png" width="450"></p>
 
 </div>
 </div>
@@ -14044,11 +14043,7 @@ p[2] = 0x10c5c1f49</code></pre>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span> 
     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">}};</span>
-    <span class="c1">// ポインタpの配列</span>
-    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
-    <span class="c1">// アドレスを設定</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>    <span class="c1">// ポインタpの配列</span>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;直接参照</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -14057,6 +14052,10 @@ p[2] = 0x10c5c1f49</code></pre>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="c1">// アドレスを設定</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ポインタを使った間接参照</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -14094,7 +14093,7 @@ p[2] = 0x10c5c1f49</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0Aint%20main%28%29%0A%7B%20%0A%20%20%20%20int%20i,%20j,%20a%5B3%5D%5B4%5D%20%3D%20%7B%7B0,%201,%202,%203%7D,%7B5,%206,%207,%208%7D,%7B10,%2011,%2012,%2013%7D%7D%3B%0A%20%20%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp%E3%81%AE%E9%85%8D%E5%88%97%0A%20%20%20%20int%20*p%5B3%5D%3B%0A%20%20%20%20//%20%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20p%5Bi%5D%20%3D%20a%5Bi%5D%3B%0A%0A%20%20%20%20printf%28%22%E7%9B%B4%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20a%5Bi%5D%5Bj%5D%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%0A%20%20%20%20printf%28%22%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%93%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20p%5Bi%5D%5Bj%5D%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0Aint%20main%28%29%0A%7B%20%0A%20%20%20%20int%20i,%20j,%20a%5B3%5D%5B4%5D%20%3D%20%7B%7B0,%201,%202,%203%7D,%7B5,%206,%207,%208%7D,%7B10,%2011,%2012,%2013%7D%7D%3B%0A%20%20%20%20int%20*p%5B3%5D%3B%20%20%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp%E3%81%AE%E9%85%8D%E5%88%97%0A%0A%20%20%20%20printf%28%22%E7%9B%B4%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20a%5Bi%5D%5Bj%5D%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%0A%20%20%20%20//%20%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20p%5Bi%5D%20%3D%20a%5Bi%5D%3B%0A%0A%20%20%20%20printf%28%22%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%93%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20p%5Bi%5D%5Bj%5D%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>
@@ -14110,14 +14109,11 @@ p[2] = 0x10c5c1f49</code></pre>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">}};</span>
-    <span class="c1">// ポインタpの配列</span>
-    <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>  <span class="c1">// ポインタの宣言</span>
+
     <span class="c1">// アドレスを設定</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
         <span class="n">p1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-
-    <span class="c1">// ポインタp2を宣言しアドレスを設定</span>
-    <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ポインタ配列p1を使った間接参照</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -14125,6 +14121,9 @@ p[2] = 0x10c5c1f49</code></pre>
             <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">++</span><span class="p">));</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span>
+
+    <span class="c1">// アドレスを設定</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ポインタp2を使った間接参照</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -14162,7 +14161,7 @@ p[2] = 0x10c5c1f49</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20i,%20j,%20a%5B3%5D%5B4%5D%20%3D%20%7B%7B0,%201,%202,%203%7D,%7B5,%206,%207,%208%7D,%7B10,%2011,%2012,%2013%7D%7D%3B%0A%20%20%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp%E3%81%AE%E9%85%8D%E5%88%97%0A%20%20%20%20int%20*p1%5B3%5D%3B%0A%20%20%20%20//%20%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20p1%5Bi%5D%20%3D%20a%5Bi%5D%3B%0A%20%20%20%20%0A%20%20%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp2%E3%82%92%E5%AE%A3%E8%A8%80%E3%81%97%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%0A%20%20%20%20int%20*p2%20%3D%20a%5B0%5D%3B%0A%0A%20%20%20%20printf%28%22%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E9%85%8D%E5%88%97p1%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%93%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20*%28p1%5Bi%5D%2B%2B%29%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20printf%28%22%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp2%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%93%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20*%28p2%2B%2B%29%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0Aint%20main%28%29%7B%0A%20%20%20%20int%20i,%20j,%20a%5B3%5D%5B4%5D%20%3D%20%7B%7B0,%201,%202,%203%7D,%7B5,%206,%207,%208%7D,%7B10,%2011,%2012,%2013%7D%7D%3B%0A%20%20%20%20int%20*p1%5B3%5D,%20*p2%3B%20%20//%20%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%81%AE%E5%AE%A3%E8%A8%80%0A%20%20%20%20%0A%20%20%20%20//%20%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20p1%5Bi%5D%20%3D%20a%5Bi%5D%3B%0A%20%20%20%20%0A%20%20%20%20printf%28%22%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E9%85%8D%E5%88%97p1%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%93%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20*%28p1%5Bi%5D%2B%2B%29%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20//%20%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E8%A8%AD%E5%AE%9A%0A%20%20%20%20p2%20%3D%20a%5B0%5D%3B%0A%0A%20%20%20%20printf%28%22%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BFp2%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%93%E6%8E%A5%E5%8F%82%E7%85%A7%5Cn%22%29%3B%0A%20%20%20%20for%20%28i%20%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D0%3B%20j%3C4%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20*%28p2%2B%2B%29%29%3B%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>

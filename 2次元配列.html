@@ -1154,7 +1154,6 @@ img {
         border-bottom: none;
         border-left: none;
     }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13130,15 +13129,15 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>たとえば，int 型の要素が3行4列の形に並んだ２次元配列は</p>
+<p>たとえば, int 型の要素が3行4列の形に並んだ２次元配列は</p>
 <div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
 </pre></div>
 <p>のように宣言する．</p>
-<p>このように宣言された２次元配列の各行，各列には，0番から始まる番号が付けらる．</p>
-<p><code>第i行</code>，<code>第j列</code>の場所にある要素は<code>配列名[i][j]</code>という形で表される．</p>
+<p>このように宣言された２次元配列の各行, 各列には, 0番から始まる番号が付けらる．</p>
+<p><code>第i行</code>, <code>第j列</code>の場所にある要素は<code>配列名[i][j]</code>という形で表される．</p>
 <p><img src="./fig/二次元配列_.png" width="470"></p>
 <p>２次元配列は行列の形に平面的にデータが配置されたと考えることができる．</p>
-<p>ただし，メモリ上では，２次元配列の各行（横の並び）がひとまとまりになったものが並んでいる．</p>
+<p>ただし, メモリ上では２次元配列の各行（横の並び）がひとまとまりになったものが並んでいる．</p>
 <p><img src="./fig/二次元配列2.png" width="760"></p>
 
 </div>
@@ -13210,7 +13209,7 @@ a[2][3] = 12</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>sample2.cは，２重のforループ（ネストしたforループ）を使って，二次元配列の要素の値を表示するプログラムである．</p>
+<p>sample2.cは, ２重のforループ（ネストしたforループ）を使って, 2次元配列の要素の値を表示するプログラムである．</p>
 <hr>
 <p>sample2.c</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -13248,7 +13247,7 @@ a[2][3] = 12</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%0A%7B%0A%20%20int%20a%5B3%5D%5B4%5D%20%3D%20%7B%7B1,%202,%203,%204%7D,%20%7B5,%206,%207,%208%7D,%20%7B9,%2010,%2011,%2012%7D%7D%3B%0A%20%20int%20i,%20j%3B%0A%20%20for%20%28i%20%3D%200%3B%20i%20%3C%203%3B%20i%2B%2B%29%7B%0A%20%20%20%20for%20%28j%20%3D%200%3B%20j%20%3C%204%3B%20j%2B%2B%29%7B%0A%20%20%20%20%20%20printf%28%22%25d%20%22,%20a%5Bi%5D%5Bj%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%7D%0A%0A%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20a%5B3%5D%5B4%5D%20%3D%20%7B%7B1,%202,%203,%204%7D,%20%7B5,%206,%207,%208%7D,%20%7B9,%2010,%2011,%2012%7D%7D%3B%0A%20%20%20%20int%20i,%20j%3B%0A%20%20%20%20for%20%28i%20%3D%200%3B%20i%20%3C%203%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D%200%3B%20j%20%3C%204%3B%20j%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%20%22,%20a%5Bi%5D%5Bj%5D%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>
