@@ -13462,7 +13462,7 @@ putchar関数は文字を1文字標準出力に出力する関数</p>
 
     <span class="c1">// ポインタにアドレスを設定</span>
     <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="c1">// コードを書く</span>
     <span class="p">}</span>
 
     <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -13491,8 +13491,8 @@ putchar関数は文字を1文字標準出力に出力する関数</p>
     <span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
 
-    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span> <span class="p">){</span>
-        <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=&amp;</span><span class="n">array</span><span class="p">[</span><span class="mi">4</span><span class="o">-</span><span class="n">i</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="c1">// コードを書く</span>
     <span class="p">}</span>
 
     <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
@@ -13569,8 +13569,9 @@ putchar関数は文字を1文字標準出力に出力する関数</p>
     <span class="cm">/* コードを書く */</span>
 
     <span class="c1">// 文字の代入</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="mi">-1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="mi">-1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
         <span class="o">*</span><span class="p">(</span><span class="n">cp</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">=</span><span class="sc">&#39;a&#39;</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
     <span class="o">*</span><span class="p">(</span><span class="n">cp</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cp</span><span class="p">);</span>
