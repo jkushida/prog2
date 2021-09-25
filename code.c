@@ -1,20 +1,40 @@
 #include <stdio.h>
 
-int main(void){
-    char st[]= "Summer";
-    char *p1, *p2;                   // ポインタp1,p2の宣言
+typedef struct{ // 社員情報
+    int no;
+    char name[8];
+    double kyuuyo;
+}syain_dt;
+
+void print_one_data(syain_dt sp);
+
+int main(){
+    int i, no = -1;
+    syain_dt ics[5] = {
+        {101, "Sakata", 300000},
+        {102, "Tanaka", 500000},
+        {103, "Sasaki", 450000},
+        {104, "Yamada", 250000},
+        {105, "harada", 370000},
+    };
     
-    p1= st;                           // p1にstのアドレスを設定 (p1=&st[0]; と書いても同様)
-    printf("%c", *p1);              // p1によるstの表示 （ポインタの値を変えずに参照）
-    printf("%c", *(p1+1));
-    printf("%c\n", *(p1+2));
+    printf("検索したいnoを入力 ");
+    scanf("%d", &no);
     
-    p2= st;                          // p2にstのアドレスを設定 (p2=&st[0]; と書いても同様)
-    printf("%c", *p2);            // p2によるstの表示 (ポインタの値を更新して参照)
-    p2++;
-    printf("%c", *p2);
-    p2++;
-    printf("%c\n", *p2);
+    for(i=0; i<5; i++){
+        if(no == ics[i].no)
+            break;
+    }
+    
+    if( i  < 5)
+        print_one_data(ics[i]);
+    else
+        printf("見つかりませんでした．\n");
     
     return 0;
+}
+
+// 一人分のデータを表示する関数
+void print_one_data(syain_dt sp){
+    printf("%d \t %s \t %.1f\n",sp.no,  sp.name,  sp.kyuuyo);
 }
