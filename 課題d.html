@@ -13643,7 +13643,7 @@ dest.b = 3</code></pre>
 
     <span class="c1">// 配列score[3]の要素の平均からhanteiを決定する. </span>
     <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="n">seiseki_syori</span><span class="p">(</span><span class="o">&amp;</span><span class="n">info</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="n">seiseki_syori</span><span class="p">(</span><span class="cm">/* コードを書く */</span><span class="p">);</span>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;成績処理後</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -13664,15 +13664,9 @@ dest.b = 3</code></pre>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">seiseki_syori</span><span class="p">(</span><span class="n">student_dt</span> <span class="o">*</span><span class="n">sp</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="n">sum</span> <span class="o">+=</span> <span class="n">sp</span><span class="o">-&gt;</span><span class="n">score</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="n">sp</span><span class="o">-&gt;</span><span class="n">average</span><span class="o">=</span><span class="n">sum</span><span class="o">/</span><span class="mf">3.0</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">average</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="n">strcpy</span><span class="p">(</span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">hantei</span><span class="p">,</span> <span class="s">&quot;合格&quot;</span><span class="p">);</span>
-    <span class="k">else</span>
-        <span class="n">strcpy</span><span class="p">(</span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">hantei</span><span class="p">,</span> <span class="s">&quot;不合格&quot;</span><span class="p">);</span>
+
+    <span class="cm">/* コードを書く */</span>
+
 <span class="p">}</span>
 </pre></div>
 <p>実行結果</p>
