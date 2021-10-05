@@ -13295,7 +13295,7 @@ aのアドレスは 0x30c934568</code></pre>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str1[1] = %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str1[2] =  %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 
-    <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 <hr>
@@ -13390,7 +13390,7 @@ str1 =  0x30551d568
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str2[0][3] = %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">str2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span> 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str2[0][4] = %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">str2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]);</span> 
 
-    <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span> <span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 <hr>
@@ -13865,10 +13865,10 @@ b[2] = 99     address = 0x305023536</code></pre>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
     <span class="kt">char</span> <span class="n">st</span><span class="p">[]</span><span class="o">=</span> <span class="s">&quot;Summer&quot;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>                   <span class="c1">// ポインタp1,p2の宣言</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>                <span class="c1">// ポインタp1,p2の宣言</span>
 
-    <span class="n">p1</span><span class="o">=</span> <span class="n">st</span><span class="p">;</span>                           <span class="c1">// p1にstのアドレスを設定 (p1=&amp;st[0]; と書いても同様)</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p1</span><span class="p">);</span>              <span class="c1">// p1によるstの表示 （ポインタの値を変えずに参照）</span>
+    <span class="n">p1</span><span class="o">=</span> <span class="n">st</span><span class="p">;</span>                         <span class="c1">// p1にstのアドレスを設定 (p1=&amp;st[0]; と書いても同様)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p1</span><span class="p">);</span>           <span class="c1">// p1によるstの表示 （ポインタの値を変えずに参照）</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">p1</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>              
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">p1</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
 

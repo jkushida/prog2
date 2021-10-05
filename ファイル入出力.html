@@ -13133,7 +13133,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>以下のsample1.cはファイル（test.txt）を読み込み，その内容を出力するコードである．</p>
 <hr>
-<p>sample1.c</p>
+<p><strong>sample1.c</strong></p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
@@ -13277,6 +13277,8 @@ sample1.cでは，</p>
 </ul>
 <p>■ 使用例</p>
 <div class="highlight"><pre><span></span><span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+
+<span class="c1">// data.txtというファイルを, 指定モード r でオープンする．</span>
 <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span>
 <span class="k">if</span><span class="p">(</span><span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>    
 　　　　 <span class="cm">/*エラー処理*/</span>
@@ -13289,7 +13291,7 @@ sample1.cでは，</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#12514;&#12540;&#12489;">&#12514;&#12540;&#12489;<a class="anchor-link" href="#&#12514;&#12540;&#12489;">&#182;</a></h2><p>オープンモードの種類を以下の表に示す．</p>
+<p>オープンモードの種類を以下の表に示す．</p>
 <p><img style="float: left;" src="./fig/mode.png" width="650"></p>
 
 </div>
@@ -13422,7 +13424,7 @@ sample1.cでは，</p>
 ファイルポインタを指定する以外はscanfと同じ．</p>
 <p>■ 返却値</p>
 <ul>
-<li>正常時: 入力項目</li>
+<li>正常時: 入力項目 (読み込んだ変数の個数)</li>
 <li>異常時: EOF</li>
 </ul>
 <p>■ 使用例</p>
@@ -13463,7 +13465,14 @@ sample1.cでは，</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="--fgets-(1&#34892;&#35501;&#12415;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">- fgets (1&#34892;&#35501;&#12415;&#36796;&#12415;) &#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;<a class="anchor-link" href="#--fgets-(1&#34892;&#35501;&#12415;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">&#182;</a></h2><p>sample2.c</p>
+<h2 id="fgets-(1&#34892;&#35501;&#12415;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">fgets (1&#34892;&#35501;&#12415;&#36796;&#12415;) &#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;<a class="anchor-link" href="#fgets-(1&#34892;&#35501;&#12415;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">&#182;</a></h2><p>sample2.cは，以下の test.txt を読み込んでその内容を出力するプログラムである．</p>
+<p>test.txt の中身</p>
+
+<pre><code>abcd
+efg
+hijkl</code></pre>
+<hr>
+<p><strong>sample2.c</strong></p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
@@ -13493,6 +13502,180 @@ sample1.cでは，</p>
 <span class="p">}</span>
 </pre></div>
 <hr>
+<p>実行結果 (test.txt の中身を表示)</p>
+
+<pre><code>abcd
+efg
+hijkl</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="fscanf-&#12434;&#20351;&#12387;&#12383;&#31354;&#30333;&#12391;&#21306;&#20999;&#12425;&#12428;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">fscanf &#12434;&#20351;&#12387;&#12383;&#31354;&#30333;&#12391;&#21306;&#20999;&#12425;&#12428;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;<a class="anchor-link" href="#fscanf-&#12434;&#20351;&#12387;&#12383;&#31354;&#30333;&#12391;&#21306;&#20999;&#12425;&#12428;&#12383;&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">&#182;</a></h2><p>sample3.cは, 空白 (半角スペース) で区切られたファイル (space.txt) を読み込むプログラムである．</p>
+<p>space.txt の中身</p>
+
+<pre><code>test01 1001 11 5.0 1.1
+test02 1002 21 6.0 2.1
+test03 1003 31 7.0 3.1</code></pre>
+<p>space.txt の中身は上記のように空白で区切る形になっており,  <strong>文字列 整数 整数 実数 実数</strong> という書式となっている．</p>
+<p>この書式をfscanf()にそのまま当てはめる．</p>
+<div class="highlight"><pre><span></span><span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%s %d %d %f %f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f2</span> <span class="p">)</span>
+</pre></div>
+<p>このように, 取り込む変数の型と順序及び個数を一致させる．</p>
+<hr>
+<p><strong>sample3.c</strong></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">fname</span> <span class="o">=</span> <span class="s">&quot;space.txt&quot;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">;</span>
+
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span> <span class="n">fname</span><span class="p">,</span> <span class="s">&quot;r&quot;</span> <span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%sファイルが開けません</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fname</span> <span class="p">);</span>
+        <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%s %d %d %f %f&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f2</span> <span class="p">)</span> <span class="o">!=</span> <span class="n">EOF</span> <span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%s %d %d %.1f %.1f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">fclose</span><span class="p">(</span> <span class="n">fp</span> <span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>test01 1001 11 5.0 1.1
+test02 1002 21 6.0 2.1
+test03 1003 31 7.0 3.1</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="fscanf&#12434;&#20351;&#12387;&#12383;CSV&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">fscanf&#12434;&#20351;&#12387;&#12383;CSV&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;<a class="anchor-link" href="#fscanf&#12434;&#20351;&#12387;&#12383;CSV&#12501;&#12449;&#12452;&#12523;&#12398;&#35501;&#12415;&#36796;&#12415;">&#182;</a></h2><ul>
+<li>csvファイルの読み込み例1</li>
+</ul>
+<p>sample4.cは, csvファイル (data.csv) を読み込むプログラムである．</p>
+<p>data.csv の中身</p>
+
+<pre><code>test01,1001,11,5,1.1
+test02,1002,21,6,2.1
+test03,1003,31,7,3.1</code></pre>
+<p>csvファイルとは, データが『,』(カンマ)で区切られているファイルである．</p>
+<p>文字列を読み込む際はカンマを含まないような指定をする．</p>
+<div class="highlight"><pre><span></span><span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%[^,], %d, %d, %f, %f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f2</span> <span class="p">)</span>
+</pre></div>
+<p><code>%[^,]</code> は『,』以外の文字を読み込むという指定である．</p>
+<hr>
+<p><strong>sample4.c</strong></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">fname</span> <span class="o">=</span> <span class="s">&quot;data.csv&quot;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">;</span>
+
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span> <span class="n">fname</span><span class="p">,</span> <span class="s">&quot;r&quot;</span> <span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%sファイルが開けません</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fname</span> <span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%[^,], %d, %d, %f, %f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f2</span> <span class="p">)</span> <span class="o">!=</span> <span class="n">EOF</span> <span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%s %d %d %.1f %.1f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="n">fclose</span><span class="p">(</span> <span class="n">fp</span> <span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>test01 1001 11 5.0 1.1
+test02 1002 21 6.0 2.1
+test03 1003 31 7.0 3.1</code></pre>
+<p><span style="color: blue; ">このコードを実行する際は, data.csvを作成しておくこと．</span></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>csvファイルの読み込み例2</li>
+</ul>
+<p>sample5.cは, csvファイル (data2.csv) を読み込むプログラムである．</p>
+<p>このファイルは一行目(ヘッダ)は各列のラベル名となっている．</p>
+<p>data2.csv の中身</p>
+
+<pre><code>name,no,score1,score2,point
+test01,1001,11,5,1.1
+test02,1002,21,6,2.1
+test03,1003,31,7,3.1</code></pre>
+<p>2行目以降は以下のコードで読み込む
+ここで，fscanfの返り値は代入できた個数であり， 1行内の変数の個数(5)である限り繰り返す．</p>
+<div class="highlight"><pre><span></span><span class="k">while</span><span class="p">(</span> <span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%[^,], %d, %d, %d, %f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">){</span>
+</pre></div>
+<hr>
+<p><strong>sample5.c</strong></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">fname</span> <span class="o">=</span> <span class="s">&quot;data2.csv&quot;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">100</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">f</span><span class="p">;</span>
+
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span> <span class="n">fname</span><span class="p">,</span> <span class="s">&quot;r&quot;</span> <span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%sファイルが開けません</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fname</span> <span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 1行目(ヘッダ)のみを読み込み</span>
+    <span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%[^,], %[^,], %[^,], %[^,], %s&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%s %s %s %s %s&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">str</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+
+    <span class="c1">// 2行目以降を読み込み</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">fscanf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%[^,], %d, %d, %d, %f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%s %d %d %d %.1f&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="n">fclose</span><span class="p">(</span> <span class="n">fp</span> <span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>name no score1 score2 point
+test01 1001 11 5 1.1
+test02 1002 21 6 2.1
+test03 1003 31 7 3.1</code></pre>
+<p><span style="color: blue; ">このコードを実行する際は, data2.csvを作成しておくこと．</span></p>
 
 </div>
 </div>
@@ -13507,7 +13690,9 @@ sample1.cでは，</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="--fputs-(1&#34892;&#26360;&#12365;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;">- fputs (1&#34892;&#26360;&#12365;&#36796;&#12415;) &#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;<a class="anchor-link" href="#--fputs-(1&#34892;&#26360;&#12365;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;">&#182;</a></h2><p>sample3.c</p>
+<h2 id="fputs-(1&#34892;&#26360;&#12365;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;">fputs (1&#34892;&#26360;&#12365;&#36796;&#12415;) &#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;<a class="anchor-link" href="#fputs-(1&#34892;&#26360;&#12365;&#36796;&#12415;)-&#12434;&#20351;&#12387;&#12383;&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;">&#182;</a></h2><p>sample6.cは， fputsを使い文字列をテキストファイル (output.txt) に書き込みを行う．</p>
+<hr>
+<p><strong>sample6.c</strong></p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -13528,6 +13713,55 @@ sample1.cでは，</p>
 <span class="p">}</span>
 </pre></div>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="fprintf&#12434;&#20351;&#12387;&#12383;csv&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;">fprintf&#12434;&#20351;&#12387;&#12383;csv&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;<a class="anchor-link" href="#fprintf&#12434;&#20351;&#12387;&#12383;csv&#12501;&#12449;&#12452;&#12523;&#12408;&#12398;&#26360;&#12365;&#36796;&#12415;">&#182;</a></h2><p>sample7.cでは，<strong>文字列 整数 整数 実数 実数</strong> という書式で
+fprintf()を使い, csvファイル (output.csv) に書き込みを行う．</p>
+<hr>
+<p><strong>sample7.c</strong></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">fname</span> <span class="o">=</span> <span class="s">&quot;output.csv&quot;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;test1&quot;</span> <span class="p">,</span> <span class="s">&quot;test2&quot;</span> <span class="p">,</span> <span class="s">&quot;test3&quot;</span> <span class="p">};</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">;</span>
+
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span> <span class="n">fname</span><span class="p">,</span> <span class="s">&quot;w&quot;</span> <span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%sファイルが開けません</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fname</span> <span class="p">);</span>
+        <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">f1</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">11.1</span><span class="p">;</span>
+        <span class="n">f2</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">;</span>
+        <span class="n">fprintf</span><span class="p">(</span> <span class="n">fp</span><span class="p">,</span> <span class="s">&quot;%s, %d, %d, %0.1f, %0.1f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">fclose</span><span class="p">(</span> <span class="n">fp</span> <span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%sへのファイル書き込み終了</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">fname</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>output.csvへのファイル書き込み終了</code></pre>
+<p>output.csvの中身</p>
+
+<pre><code>test01,1001,11,5,1.1
+test02,1002,21,6,2.1
+test03,1003,31,7,3.1</code></pre>
 
 </div>
 </div>

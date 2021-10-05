@@ -13102,7 +13102,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": false};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13133,7 +13133,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>以下のsample1.cは，マクロ名定義を使ったプログラムである．</p>
 <hr>
-<p>sample1.c</p>
+<p><strong>sample1.c</strong></p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="cp">#define SIZE 5</span>
@@ -13174,6 +13174,120 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>この例では，プリプロセッサの働きで，コンパイル前にソースプログラムの中の<code>SIZE</code>がすべて5に置き換わる．</p>
 <p>このコードでは，配列<code>a</code>の大きさを<code>SIZE</code>で指定しているが，プログラムに変更が生じて大きさを変えたいときは，<code>#define</code>命令行を修正するだけで対応できる．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#38306;&#25968;&#22411;&#12510;&#12463;&#12525;&#23450;&#32681;">&#38306;&#25968;&#22411;&#12510;&#12463;&#12525;&#23450;&#32681;<a class="anchor-link" href="#&#38306;&#25968;&#22411;&#12510;&#12463;&#12525;&#23450;&#32681;">&#182;</a></h1><p>マクロ定義は引数を持ち，関数のように記述することができる．</p>
+
+<pre><code>#define  マクロ名(仮引数)  引数を含む文字列</code></pre>
+<p>sample2.cは引数の2乗を返すマクロ定義を用いたプログラムである．</p>
+<p>なお,<code>square(x)</code>と<code>calc_square(int x)</code>は同様の処理となる．</p>
+<hr>
+<p><strong>sample2.c</strong></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define square(x) ((x)*(x))</span>
+
+<span class="kt">int</span> <span class="nf">calc_square</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;関数形式マクロ:  %dの２乗 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">square</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ユーザ関数:        %dの２乗 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">calc_square</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>関数形式マクロ:  5の２乗 25
+ユーザ関数:        5の２乗 25</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#12518;&#12540;&#12470;&#23450;&#32681;&#12398;&#12504;&#12483;&#12480;&#12501;&#12449;&#12452;&#12523;">&#12518;&#12540;&#12470;&#23450;&#32681;&#12398;&#12504;&#12483;&#12480;&#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#&#12518;&#12540;&#12470;&#23450;&#32681;&#12398;&#12504;&#12483;&#12480;&#12501;&#12449;&#12452;&#12523;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>C言語では, <code>#include</code>プリプロセッサ指令を使ってヘッダファイルを取り込む．</p>
+<p>sample3.c はユーザ定義のヘッダファイル <strong>student.h</strong> を用いたプログラムである．</p>
+<p><img src="./fig/ヘッダ.png" width="600"></p>
+<p>このプログラムでは, 自作のヘッダファイル （拡張子は 「.h」）を作成し, ソースプログラムでインクルードしている.</p>
+<p>ユーザ定義のヘッダファイルには，</p>
+<ul>
+<li>マクロ名定義や関数型マクロ定義</li>
+<li>構造体の宣言</li>
+<li>関数のプロトタイプ宣言</li>
+<li>グローバル関数の定義
+を記述するのが一般的である．</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><strong>student.h</strong></p>
+<div class="highlight"><pre><span></span><span class="cm">/* ユーザが定義した学生情報のヘッダファイル */</span>
+<span class="k">struct</span> <span class="nc">student</span><span class="p">{</span>     <span class="c1">// 学生情報</span>
+  <span class="kt">int</span> <span class="n">no</span><span class="p">;</span>           <span class="c1">// 学生番号</span>
+  <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>    <span class="c1">// 氏名</span>
+  <span class="kt">double</span> <span class="n">average</span><span class="p">;</span>   <span class="c1">// 平均点</span>
+<span class="p">};</span>
+
+<span class="c1">//関数プロトタイプ宣言</span>
+<span class="kt">void</span> <span class="nf">show_info</span><span class="p">(</span><span class="k">struct</span> <span class="nc">student</span> <span class="n">sei</span><span class="p">);</span> <span class="c1">//情報の表示</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><strong>sample3.c</strong></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="c1">     // 標準ヘッダファイルの組み込み</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;student.h&quot;</span><span class="c1">  // ユーザ定義のヘッダファイルの組み込み</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="nc">student</span> <span class="n">seito</span> <span class="o">=</span> <span class="p">{</span><span class="mi">9</span><span class="p">,</span> <span class="s">&quot;Ogata&quot;</span><span class="p">,</span> <span class="mf">73.9</span><span class="p">};</span>
+    <span class="n">show_info</span><span class="p">(</span><span class="n">seito</span><span class="p">);</span> <span class="c1">// 構造体の値渡し</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">show_info</span><span class="p">(</span><span class="k">struct</span> <span class="nc">student</span> <span class="n">sei</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;学生番号: %d,  氏名: %s,  平均点: %.1f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">sei</span><span class="p">.</span><span class="n">no</span><span class="p">,</span> <span class="n">sei</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">sei</span><span class="p">.</span><span class="n">average</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<p>実行結果</p>
+
+<pre><code>学生番号: 9,  氏名: Ogata,  平均点: 73.9</code></pre>
 
 </div>
 </div>
