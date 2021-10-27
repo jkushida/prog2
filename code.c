@@ -1,53 +1,37 @@
-// e1-7.c 解答
+// 番兵を用いた線形探索
 #include <stdio.h>
 
-struct  member{
-    int     no;          // 番号
-    char    name[10];    // 氏名
-    int     age;         // 年齢
-    int     exp;         // 勤務年数
-};
+int linearSearch(int data[], int n, int x) ;
 
-void disp(struct member *p);
-
-char *fname = "meibo2.csv";
-
-int main(void)
-{
-    int i;
-    FILE *fp;
-    struct  member p[5]={
-        {1, "田中", 21, 4},
-        {2, "山田", 19, 3},
-        {3, "坂本", 20, 5},
-        {4, "岡本", 30, 10},
-        {4, "佐藤", 50, 18}
-    };
+int main(){
+    int i, x, index, data[6] = {5, 6, 3, 1, 8, 9};
     
-    // 最初ファイルを書き込み専用で開き，閉じることで中身をクリアする
-    fp = fopen(fname,"w");
-    fclose(fp);
+    printf("検索したいデータを入力してください -> ");
+    scanf("%d", &x);
+    
+    index = linearSearch(data, 6, x);
+    printf("index = %d\n", index);
+}
 
-    for(i=0;i<5;i++){
-        disp(&p[i]);
+// 線形探索法 + 番兵　配列の先頭から順番に調べていく
+// 引数は探索対象の配列，配列の要素数，探索する値
+int linearSearch(int data[], int n, int x) {
+    int i, data2[n+1];
+    for(i = 0; i < n; i++)
+        data2[i] = data[i];
+    data2[n] = x;
+    
+    i = 0;
+    while(1){
+        
+        if(data2[i] == x )
+            break;
+        i++;
     }
     
-    return 0;
+    if (i == n)
+        return -1;  // 見つからなければ-1を返す
+    
+    return i;   // 見つかればindexを返す
 }
 
-void disp(struct member *p)
-{
-    FILE *fp;
-    int i;
-    
-    /* 追加書き込みでファイルを開く*/
-    /* コードを書く*/
-    fp = fopen(fname,"a");
-    
-    /* データ一件分を表示 */
-    /* コードを書く*/
-    fprintf(fp, "%d, %s, %d, %d\n",p->no, p->name, p->age, p->exp);
-    
-    printf("一件分のデータを書き込み\n");
-    fclose(fp);
-}
