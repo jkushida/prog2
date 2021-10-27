@@ -1148,12 +1148,12 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-    hr {
-        border-top: 2px solid black;
-        border-right: none;
-        border-bottom: none;
-        border-left: none;
-    }
+hr {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13120,7 +13120,7 @@ $( document ).ready(function(){
 <h1 id="&#27083;&#36896;&#20307;">&#27083;&#36896;&#20307;<a class="anchor-link" href="#&#27083;&#36896;&#20307;">&#182;</a></h1><p>プログラムがある程度大規模になってくると，一つの概念に対して複数の変数が割り当てられることがある．</p>
 <p>例えば，学校で学生のデータベースを作る時、その学生の<code>int型</code>の学生番号，<code>char型</code>の名前，<code>double型</code>の平均点などのデータをひとまとめにして扱う事になる．</p>
 <p>このようなプログラムを作成する際は，<strong>複数の変数をひとまとめにする構造体</strong>を用いる．</p>
-<p><img src="./fig/配列と構造体.png" width="500"></p>
+<p><img src="./fig/test1.png" width="500"></p>
 
 </div>
 </div>
@@ -14277,7 +14277,7 @@ no = 4, value = 4.23</code></pre>
 <li><p>値渡しでは，<code>.</code>演算子を用いて関数側で構造体のメンバを参照する．</p>
 </li>
 </ul>
-<p><img style="float: left;" src="./fig/値渡しとアドレス渡し1.png" width="400"></p>
+<p><img style="float: left;" src="./fig/値渡しとアドレス1.png" width="400"></p>
 
 </div>
 </div>
@@ -14347,7 +14347,7 @@ no = 4, value = 4.23</code></pre>
 <li><p>アドレス渡しでは，メンバの参照の際は<code>-&gt;</code>演算子を用いる．</p>
 </li>
 </ul>
-<p><img style="float: left;" src="./fig/値渡しとアドレス渡し2.png" width="400"></p>
+<p><img style="float: left;" src="./fig/値渡しとアドレス2.png" width="400"></p>
 
 </div>
 </div>
@@ -14593,7 +14593,7 @@ no = 4, value = 4.23</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>このコードでは，<code>main</code>関数で構造体の配列<code>sei[N]</code>を用意し，その先頭アドレスを引数で渡している．</p>
 <p><code>func2</code>関数では新たに構造体の配列<code>s[N]</code>を用意し，<code>s[N]</code>の情報をポインタを使って<code>sei[N]</code>にコピーしている．</p>
-<p><img style="float: left;" src="./fig/返却値3.png" width="500"></p>
+<p><img style="float: left;" src="./fig/返却値3.png" width="480"></p>
 
 </div>
 </div>
