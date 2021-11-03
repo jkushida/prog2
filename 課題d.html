@@ -13371,7 +13371,7 @@ dest.b = 3</code></pre>
 </pre></div>
 <p>実行結果</p>
 
-<pre><code>学生番号: 9,  氏名: Ogata,  平均点: 73.900000</code></pre>
+<pre><code>学生番号: 9,  氏名: Ogata,  平均点: 73.9</code></pre>
 
 </div>
 </div>
@@ -13716,20 +13716,20 @@ harada 23 87 36 48.7 不合格</code></pre>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;試験の回数を入力 &quot;</span><span class="p">);</span>
     <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
 
-    <span class="c1">// subjectsのメモリ確保を確保する</span>
+    <span class="c1">// subjectsのメモリ領域を確保する</span>
     <span class="c1">// コードを書く</span>
 
     <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d回目の試験の点を入力 &quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
         <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">);</span>
 
-        <span class="c1">// コードの点をsubjectsに代入するコードを書く</span>
+        <span class="c1">// 点をsubjectsに代入するコードを書く</span>
     <span class="p">}</span>
 
     <span class="c1">// averageを計算するコードを書く</span>
 
     <span class="c1">// 結果の出力</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;名前: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d回試験の結果: &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
     <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
