@@ -1,37 +1,44 @@
-// 番兵を用いた線形探索
 #include <stdio.h>
 
-int linearSearch(int data[], int n, int x) ;
-
-int main(){
-    int i, x, index, data[6] = {5, 6, 3, 1, 8, 9};
+int main()
+{
+    int i, j, k;
+    int count=0;
     
-    printf("検索したいデータを入力してください -> ");
-    scanf("%d", &x);
+    // 部屋番号を 100*i + 10*j + k で示し，カウントしていく
     
-    index = linearSearch(data, 6, x);
-    printf("index = %d\n", index);
-}
-
-// 線形探索法 + 番兵　配列の先頭から順番に調べていく
-// 引数は探索対象の配列，配列の要素数，探索する値
-int linearSearch(int data[], int n, int x) {
-    int i, data2[n+1];
-    for(i = 0; i < n; i++)
-        data2[i] = data[i];
-    data2[n] = x;
-    
-    i = 0;
-    while(1){
+    // 100の桁
+    for(i=0;i<10;i++){
+        // 数字に4 or 9が出る場合はスキップ(カウントしない)
+        if(i == 4 || i == 9)
+            continue;
         
-        if(data2[i] == x )
-            break;
-        i++;
+        // 10の桁
+        for(j=0;j<10;j++){
+            
+            if(j == 4 || j == 9)
+                continue;
+            
+            // 1の桁
+            for(k=0;k<10;k++){
+                if(k == 4 || k == 9)
+                    continue;
+                
+                if(i == 0 && j ==0 && k==0)
+                    continue;
+        
+                count++;
+                
+                if(i == 3 && j == 3 && k == 0 )
+                    printf("部屋番号が0330の部屋は%d番目の部屋\n", count);
+                
+                if(count == 500)
+                    printf("500番目の部屋の部屋番号は0%d%d%d\n", i, j, k);
+                
+            }
+        }
+        
     }
     
-    if (i == n)
-        return -1;  // 見つからなければ-1を返す
-    
-    return i;   // 見つかればindexを返す
+    return 0;
 }
-

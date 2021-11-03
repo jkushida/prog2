@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 typedef struct{
     int no;
     char name[5];
@@ -31,7 +30,6 @@ int main()
     int n1, n2, n3;
     float f;
     
-    
     fp = fopen( fname, "r" );
     if( fp == NULL ){
         printf( "%sファイルが開けません\n", fname );
@@ -49,15 +47,13 @@ int main()
     // 2行目以降を読み込み
     while( fscanf( fp, " %d, %[^,], %d, %d, %f",&n1, s, &n2, &n3, &f ) == 5){
         //printf( "%d %s %d %d %.1f\n", n1, s, n2, n3, f);
-        
         seito[i].no = n1;
         strcpy(seito[i].name, s);
         seito[i].score1 = n2;
         seito[i].score2 = n3;
         seito[i].point = f;
-        i ++;
+        i++;
     }
-    
     
     
     print_data(seito, n);
@@ -92,10 +88,10 @@ int main()
     
     file_output_data(seito, n);
     
-    return (0);
+    return 0;
 }
 
-// score1で昇順にソート
+// score1をキーとして昇順にソート
 void bubbleSort1(student_t *seito, int n){
     int i,j;
     
@@ -104,12 +100,11 @@ void bubbleSort1(student_t *seito, int n){
         for(j=n-1; j>i; j--){
             if(seito[j-1].score1>seito[j].score1)
                 swap( &seito[j], &seito[j-1]);
-            
         }
     }
 }
 
-// score2で降順にソート
+// score2をキーとして降順にソート
 void bubbleSort2(student_t *seito, int n){
     int i,j;
     
@@ -123,7 +118,7 @@ void bubbleSort2(student_t *seito, int n){
     }
 }
 
-// pointで降順にソート
+// pointをキーとして降順にソート
 void bubbleSort3(student_t *seito, int n){
     int i,j;
     
