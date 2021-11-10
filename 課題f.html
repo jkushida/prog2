@@ -13787,20 +13787,15 @@ ID, name
     <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">key</span><span class="p">){</span>  <span class="c1">// 削除データが先頭</span>
 
         <span class="c1">// 先頭を飛ばして次のノードをheadにする</span>
-        <span class="k">return</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="c1">// コードを書く</span>
+
 
     <span class="p">}</span>
     <span class="k">else</span><span class="p">{</span>  <span class="c1">// 削除データが先頭以外</span>
         <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
 
-            <span class="c1">// 削除データの手前までポインタを進める</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">key</span><span class="p">){</span>
+            <span class="c1">// コードを書く</span>
 
-                <span class="c1">//　現在のノードから削除データを飛ばしたノードに繋ぐ</span>
-                <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-                <span class="k">return</span> <span class="n">h</span><span class="p">;</span> <span class="c1">// headは変わらない</span>
-            <span class="p">}</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;削除対象のデータが存在しません</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
