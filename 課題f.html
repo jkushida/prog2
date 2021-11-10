@@ -13693,6 +13693,8 @@ index = -1</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下は，自己参照構造体を用いた単方向リストのプログラムである．</p>
 <p><strong>リストから引数keyに一致するデータを削除する</strong>delete_data関数を完成させよ．</p>
+<p>IDは {101, 102,103,104,105} から指定すること．</p>
+<p>(存在しないIDを削除しようとするとエラーが出ます)</p>
 <p>実行例1</p>
 
 <pre><code>削除前
@@ -13786,7 +13788,6 @@ ID, name
     <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
     <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">key</span><span class="p">){</span>  <span class="c1">// 削除データが先頭</span>
 
-        <span class="c1">// 先頭を飛ばして次のノードをheadにする</span>
         <span class="c1">// コードを書く</span>
 
 
@@ -13796,11 +13797,7 @@ ID, name
 
             <span class="c1">// コードを書く</span>
 
-        <span class="p">}</span>
-
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;削除対象のデータが存在しません</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">h</span><span class="p">;</span> <span class="c1">// headは変わらない</span>
-
+        <span class="p">}</span>        
     <span class="p">}</span>
 
 <span class="p">}</span>
