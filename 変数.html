@@ -13506,6 +13506,63 @@ abc
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#12461;&#12540;&#12508;&#12540;&#12489;&#12363;&#12425;&#12398;&#20837;&#21147;">&#12461;&#12540;&#12508;&#12540;&#12489;&#12363;&#12425;&#12398;&#20837;&#21147;<a class="anchor-link" href="#&#12461;&#12540;&#12508;&#12540;&#12489;&#12363;&#12425;&#12398;&#20837;&#21147;">&#182;</a></h1><p>キーボードからの入力はscanf関数を用いる．</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">b</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">y</span><span class="p">[</span><span class="mi">25</span><span class="p">];</span>
+
+ <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span> <span class="c1">//整数入力</span>
+
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span> <span class="c1">//実数入力 </span>
+
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span> <span class="c1">//１文字入力 </span>
+
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>  <span class="c1">//文字列入力  (配列変数には&amp;はつけない)</span>
+</pre></div>
+<p>sample4.cはscanf関数を使ったプログラムの例である．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>sample4.c</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;実数を入力してEnterボタンを押してください</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="kt">double</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;入力された数値は：%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
+
+<pre><code>実数を入力してEnterボタンを押してください
+23.4  (←キーボードからの入力)
+入力された数値は：23.400000</code></pre>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
