@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>課題b</title>
+<title>リスト構造</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13102,7 +13102,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "176.797px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13117,436 +13117,13 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>課題b</strong></p>
-<p>1次元配列, 2次元配列, 文字列, ライブラリ関数</p>
-<p><a href="https://pythontutor.com/">https://pythontutor.com/</a></p>
-<p><a href="https://replit.com/">https://replit.com/</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1&#27425;&#20803;&#37197;&#21015;">1&#27425;&#20803;&#37197;&#21015;<a class="anchor-link" href="#1&#27425;&#20803;&#37197;&#21015;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>整数型配列<code>v[5]</code>の各要素<code>v[0]</code>,<code>v[1]</code>,<code>v[2]</code>,<code>v[3]</code>,<code>v[4]</code>をそれぞれ 3, 4, 5, 6, 7 で初期化し，<code>v[0]</code>から<code>v[4]</code>の和を計算し出力するプログラムを作成せよ.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>5人のクラスで行った英語のテストの得点（100点満点）の平均値を求めるプログラムを作成せよ． ここで，5人の英語の得点は，下記の配列<code>v[5]</code>で与えるものとする．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">v</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">54</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">83</span><span class="p">};</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の配列<code>x[5]</code>の要素を2倍し，同じ大きさの配列<code>y[5]</code>にコピーして表示させよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の配列<code>x[5]</code>と<code>y[5]</code>の同じ番号の要素をそれぞれ比較し，大きい方の要素を配列<code>z[5]</code>にコピーして表示させよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
-
-<span class="kt">int</span> <span class="n">y</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
-</pre></div>
-<p>hint:</p>
-<p><code>x[0]</code>と<code>y[0]</code>なら<code>y[0]</code>の方が大きいので, <code>y[0]</code>の値(6)を<code>z[0]</code>に代入する．</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の配列<code>x[7]</code>を逆順に並び替えて出力させよ．</p>
-<div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">};</span>
-</pre></div>
-<p>ただし， 並び替えには以下の形の<code>for</code>文を使うこと</p>
-<div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2&#27425;&#20803;&#37197;&#21015;">2&#27425;&#20803;&#37197;&#21015;<a class="anchor-link" href="#2&#27425;&#20803;&#37197;&#21015;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の２次元配列<code>x[3][5]</code>の要素のうち，奇数であるものを0で置き換えよ．</p>
-<p>その後, <code>x[3][5]</code>を実行結果のように表示せよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">}};</span>
-</pre></div>
-<p>実行結果</p>
-
-<pre><code>0 2 0 8 0 
-0 0 0 6 2 
-8 0 0 2 4</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>以下の２次元配列<code>x[3][5]</code>のすべての要素をそれぞれ２倍して表示せよ.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">}};</span>
-</pre></div>
-<p>実行結果</p>
-
-<pre><code>0 2 4 6 8 
-10 12 14 16 18 
-20 22 24 26 28</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の２次元配列<code>x[3][5]</code>のすべての要素を順番に１次元配列<code>y[15]</code>にコピーし，以下のように表示せよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">}};</span>
-</pre></div>
-<p>実行結果</p>
-
-<pre><code>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の1次元配列<code>y[12]</code>のすべての要素を順番に2次元配列<code>x[3][4]</code>にコピーし，以下のように表示せよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">y</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">}</span>
-</pre></div>
-<p>実行結果</p>
-
-<pre><code>0 1 2 3 
-4 5 6 7 
-8 9 10 11</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>ある科目の成績は以下のようになった．</p>
-<table>
-<thead><tr>
-<th style="text-align:left">No.</th>
-<th style="text-align:center">課題1</th>
-<th style="text-align:center">課題2</th>
-<th style="text-align:center">中間</th>
-<th style="text-align:center">期末</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1001</td>
-<td style="text-align:center">70</td>
-<td style="text-align:center">82</td>
-<td style="text-align:center">72</td>
-<td style="text-align:center">68</td>
-</tr>
-<tr>
-<td style="text-align:left">1002</td>
-<td style="text-align:center">66</td>
-<td style="text-align:center">28</td>
-<td style="text-align:center">75</td>
-<td style="text-align:center">38</td>
-</tr>
-<tr>
-<td style="text-align:left">1003</td>
-<td style="text-align:center">82</td>
-<td style="text-align:center">73</td>
-<td style="text-align:center">93</td>
-<td style="text-align:center">47</td>
-</tr>
-<tr>
-<td style="text-align:left">1004</td>
-<td style="text-align:center">33</td>
-<td style="text-align:center">67</td>
-<td style="text-align:center">89</td>
-<td style="text-align:center">60</td>
-</tr>
-<tr>
-<td style="text-align:left">1005</td>
-<td style="text-align:center">92</td>
-<td style="text-align:center">45</td>
-<td style="text-align:center">75</td>
-<td style="text-align:center">21</td>
-</tr>
-</tbody>
-</table>
-<p>この結果（数値の部分のみ）をint型の2次元配列に格納せよ．(宣言と同時に初期化せよ)</p>
-<p>次に，各No.ごとの点数の合計値を計算して，以下のような表を表示せよ．</p>
-<table>
-<thead><tr>
-<th style="text-align:left">No.</th>
-<th style="text-align:center">課題1</th>
-<th style="text-align:center">課題2</th>
-<th style="text-align:center">中間</th>
-<th style="text-align:center">期末</th>
-<th style="text-align:center">合計</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1001</td>
-<td style="text-align:center">70</td>
-<td style="text-align:center">82</td>
-<td style="text-align:center">72</td>
-<td style="text-align:center">68</td>
-<td style="text-align:center">?</td>
-</tr>
-<tr>
-<td style="text-align:left">1002</td>
-<td style="text-align:center">66</td>
-<td style="text-align:center">28</td>
-<td style="text-align:center">75</td>
-<td style="text-align:center">38</td>
-<td style="text-align:center">?</td>
-</tr>
-<tr>
-<td style="text-align:left">1003</td>
-<td style="text-align:center">82</td>
-<td style="text-align:center">73</td>
-<td style="text-align:center">93</td>
-<td style="text-align:center">47</td>
-<td style="text-align:center">?</td>
-</tr>
-<tr>
-<td style="text-align:left">1004</td>
-<td style="text-align:center">33</td>
-<td style="text-align:center">67</td>
-<td style="text-align:center">89</td>
-<td style="text-align:center">60</td>
-<td style="text-align:center">?</td>
-</tr>
-<tr>
-<td style="text-align:left">1005</td>
-<td style="text-align:center">92</td>
-<td style="text-align:center">45</td>
-<td style="text-align:center">75</td>
-<td style="text-align:center">21</td>
-<td style="text-align:center">?</td>
-</tr>
-</tbody>
-</table>
-<p>hint:</p>
-<p>2次元配列は<code>x[5][6]</code>のように合計の列を含めて定義する．</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下のコードを実行すると，</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">sum</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
-        <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">}};</span>
-
-    <span class="c1">// 2次元配列xの表示</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-<p>次のようなアルファベットのFの形が表示される．</p>
-
-<pre><code>1 1 1 1 0 
-1 0 0 0 0 
-1 1 1 0 0 
-1 0 0 0 0 
-1 0 0 0 0</code></pre>
-<p>このコードの配列の表示部分を変更して，次のように時計回りに90度回転させて表示させよ．</p>
-
-<pre><code>1 1 1 1 1 
-0 0 1 0 1 
-0 0 1 0 1 
-0 0 0 0 1 
-0 0 0 0 0</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#25991;&#23383;&#21015;">&#25991;&#23383;&#21015;<a class="anchor-link" href="#&#25991;&#23383;&#21015;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の文字列<code>s</code>の文字列中の<strong>アルファベットの小文字と大文字を入れて変えて出力する</strong>プログラムを作成せよ.</p>
-<div class="highlight"><pre><span></span><span class="kt">char</span> <span class="n">s</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Computer Science Curse 2022&quot;</span><span class="p">;</span>
-</pre></div>
-<p>hint: c言語 文字列 小文字 大文字 変換</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>実行結果</p>
-
-<pre><code>cOMPUTER sCIENCE cURSE 2022</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の文字列<code>s</code>の文字列中の<strong>アルファベットの小文字を取り除いて表示する</strong>プログラムを作成せよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">char</span> <span class="n">s</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;NbcFefpxyUfg&quot;</span><span class="p">;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>実行結果</p>
-
-<pre><code>NFU</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下のchar型の2次元配列を, char型の配列<code>str[15]</code>に格納し表示せよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span><span class="p">{</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="s">&quot;defg&quot;</span><span class="p">,</span><span class="s">&quot;hi&quot;</span><span class="p">};</span>
-</pre></div>
-<p>実行結果</p>
-
-<pre><code>abcdefghi</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#12521;&#12452;&#12502;&#12521;&#12522;&#38306;&#25968;">&#12521;&#12452;&#12502;&#12521;&#12522;&#38306;&#25968;<a class="anchor-link" href="#&#12521;&#12452;&#12502;&#12521;&#12522;&#38306;&#25968;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>点A (4.5 , -0.9) と点B (-3.4, -1,1) のマンハッタン距離を求めよ．</p>
-<p>なおプログラムでは，各座標は以下のように設定すること．</p>
-<div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">-0.9</span><span class="p">}</span>
-<span class="kt">double</span> <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">-3.4</span><span class="p">,</span> <span class="mf">-1.1</span><span class="p">}</span>
-</pre></div>
-<p>hint: マンハッタン距離，<code>fabs</code>関数</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>点A (4.5 , -0.9) と点B (-3.4, -1,1) のユークリッド距離を求めよ．</p>
-<p>なおプログラムでは，各座標は以下のように設定すること．</p>
-<div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">-0.9</span><span class="p">}</span>
-<span class="kt">double</span> <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">-3.4</span><span class="p">,</span> <span class="mf">-1.1</span><span class="p">}</span>
-</pre></div>
-<p>hint: ユークリッド距離，<code>sqrt</code>関数，<code>pow</code>関数</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下のコードは文字列を連結する<code>strcat</code>関数を使ったプログラムである．</p>
-<p>本来ならば連結された文字列を表示するはずであるが，正しく動作しない．</p>
-<p>正しい実行結果が表示されるようにコードを修正せよ．</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">char</span> <span class="n">str1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;ABCDEFG&quot;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">str2</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;abcdefg&quot;</span><span class="p">;</span>
-
-    <span class="n">strcat</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span><span class="n">str2</span><span class="p">);</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">str1</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<p>このまま実行すると，下記のようなエラーメッセージが出る</p>
-<p>Illegal instruction: 4</p>
+<h1 id="&#12522;&#12473;&#12488;&#27083;&#36896;">&#12522;&#12473;&#12488;&#27083;&#36896;<a class="anchor-link" href="#&#12522;&#12473;&#12488;&#27083;&#36896;">&#182;</a></h1><p>構造体と構造体をポインタでリンクして，数珠繋ぎになっている構造のことをリストという．</p>
+<p>リスト構造では，</p>
 <ul>
-<li>正しい実行結果
-<pre><code>ABCDEFGabcdefg</code></pre>
-</li>
+<li>次のノードをポインタで指すことでノード同士に繋がりを持たせる</li>
+<li>ノードを作成する際に動的にメモリを確保する</li>
+<li>ノードが不要になったら確保したメモリを解放する</li>
+<li>終端は <code>NULL</code> かどうかで判断する</li>
 </ul>
 
 </div>
@@ -13555,8 +13132,13 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>$N = 2^{30} $の桁数を表示せよ．</p>
-<p>hint: 常用対数を使った桁数の求め方, <code>log10</code>関数, math.h</p>
+<h2 id="&#21336;&#26041;&#21521;&#12522;&#12473;&#12488;">&#21336;&#26041;&#21521;&#12522;&#12473;&#12488;<a class="anchor-link" href="#&#21336;&#26041;&#21521;&#12522;&#12473;&#12488;">&#182;</a></h2><p>単方向リストは基本的なデータ構造の一つである線形リスト（linear linked list）のうち，各要素が自分の「次」の要素へのリンクを持ち，先頭側から末尾側へのみたどっていくことができるもの．</p>
+<h3 id="sample1.c">sample1.c<a class="anchor-link" href="#sample1.c">&#182;</a></h3><p>sample1.cは 単方向リストのコードで，</p>
+<ul>
+<li>データをリストの先頭に追加する<code>add_node_head</code>関数</li>
+<li>リストの要素を先頭から順に表示する<code>print_node</code>関数</li>
+</ul>
+<p>を実装している．</p>
 
 </div>
 </div>
@@ -13564,10 +13146,379 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下の配列<code>x[7]</code>に含まれる要素の標準偏差を計算し出力するプログラムを作成せよ．</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">24</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">76</span><span class="p">};</span>
+<div class="highlight"><pre><span></span><span class="c1">// sample1.c</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 自己参照構造体の宣言</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">node</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="n">node_t</span><span class="p">;</span>
+
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_head</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span> <span class="c1">// リストの先頭を指すポインタ</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+
+    <span class="n">head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// 最初はリストは空なので，headにNULLを設定</span>
+
+    <span class="c1">// データ1</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Tanama&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+    <span class="c1">// データをリストの先頭に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_head</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>
+
+    <span class="c1">// データ2</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Yamada&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">102</span><span class="p">;</span>
+    <span class="c1">// データをリストの先頭に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_head</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>  
+
+    <span class="c1">// データ3</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Itou&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">103</span><span class="p">;</span>
+    <span class="c1">// データをリストの先頭に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_head</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>  
+
+    <span class="c1">// リストのデータを表示</span>
+    <span class="n">print_node</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_head</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">){</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+
+    <span class="c1">// ノード一つ分のデータ領域を確保</span>
+    <span class="k">if</span><span class="p">((</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span> <span class="n">node_t</span><span class="p">)))</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;malloc error&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 生成したノードにデータを代入</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+
+    <span class="c1">// ポインタをつなぎ変える</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+
+    <span class="c1">// 更新したheadを返却する</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">){</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;key, name</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
-<p>hint: 標準偏差 求め方</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
+
+<pre><code>key, name
+103 Itou
+102 Yamada
+101 Tanama</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="sample2.c">sample2.c<a class="anchor-link" href="#sample2.c">&#182;</a></h3><p>sample2.cは 単方向リストのコードで，</p>
+<ul>
+<li>データをリストの末尾に追加するadd_node_tail関数</li>
+<li>リストの要素を先頭から順に表示するprint_node関数</li>
+</ul>
+<p>を実装している．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1">// sample2.c</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 自己参照構造体の宣言</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">node</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span><span class="n">node_t</span><span class="p">;</span>
+
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span> <span class="c1">// リストの先頭を指すポインタ</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+
+    <span class="n">head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// 最初はリストは空なので，headにNULLを設定</span>
+
+    <span class="c1">// データ1</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Tanama&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+    <span class="c1">// データをリストの末尾に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_tail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>
+
+    <span class="c1">// データ2</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Yamada&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">102</span><span class="p">;</span>
+    <span class="c1">// データをリストの末尾に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_tail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>  
+
+    <span class="c1">// データ3</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Itou&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">103</span><span class="p">;</span>
+    <span class="c1">// データをリストの末尾に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_tail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>  
+
+    <span class="c1">// リストのデータを表示</span>
+    <span class="n">print_node</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">){</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span><span class="o">=</span><span class="n">head</span><span class="p">;</span> <span class="c1">// hは現在のhead</span>
+
+    <span class="c1">// ノード一つ分のデータ領域を確保</span>
+    <span class="k">if</span><span class="p">((</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span> <span class="n">node_t</span><span class="p">)))</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;malloc error&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 生成したノードにデータを代入</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span> <span class="c1">// まだリストが空の場合</span>
+        <span class="k">return</span> <span class="n">p</span><span class="p">;</span> <span class="c1">// headを更新</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span> <span class="c1">// リストに既にデータがある場合</span>
+
+        <span class="c1">// リストの末尾までポインタhを進める</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">h</span><span class="o">=</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span> <span class="c1">//現在のリストの次がp</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>  <span class="c1">// headはそのまま</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">){</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;key, name</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
+
+<pre><code>key, name
+101 Tanama
+102 Yamada
+103 Itou</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21452;&#26041;&#21521;&#12522;&#12473;&#12488;">&#21452;&#26041;&#21521;&#12522;&#12473;&#12488;<a class="anchor-link" href="#&#21452;&#26041;&#21521;&#12522;&#12473;&#12488;">&#182;</a></h2><p>双方向リストでは先頭から末尾にかけてのポインタのみではなく，各ノードは反対方向のポインタも持っている．</p>
+<p>これによって，前後どちらの方向へでも連結をたどることが可能となる．</p>
+<h3 id="sample3.c">sample3.c<a class="anchor-link" href="#sample3.c">&#182;</a></h3><p>sample3.cは 双方向リストのコードで，</p>
+<ul>
+<li>データをリストの末尾に追加するadd_node_tail関数</li>
+<li>リストの要素を先頭から末尾の順に表示するprint_node_forward関数</li>
+<li>リストの要素を末尾から先頭の順に表示するprint_node_backward関数</li>
+</ul>
+<p>を実装している．</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1">// sample3.c</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 自己参照構造体の宣言</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">node</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span> <span class="c1">// 次の要素へのポインタ</span>
+    <span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span><span class="n">prev</span><span class="p">;</span>  <span class="c1">// 手前の要素へのポインタ</span>
+<span class="p">}</span><span class="n">node_t</span><span class="p">;</span>
+
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print_node_forward</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print_node_backward</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span> <span class="c1">// リストの先頭を指すポインタ</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+
+    <span class="n">head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// 最初はリストは空なので，headにNULLを設定</span>
+
+    <span class="c1">// データ1</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Tanama&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+    <span class="c1">// データをリストの末尾に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_tail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>
+
+    <span class="c1">// データ2</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Yamada&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">102</span><span class="p">;</span>
+    <span class="c1">// データをリストの末尾に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_tail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>  
+
+    <span class="c1">// データ3</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;Itou&quot;</span><span class="p">);</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="mi">103</span><span class="p">;</span>
+    <span class="c1">// データをリストの末尾に追加</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">add_node_tail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">head</span><span class="p">);</span>  
+
+    <span class="c1">// リストのデータを表示(先頭-&gt;末尾)</span>
+    <span class="n">print_node_forward</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="c1">// リストのデータを表示(末尾-&gt;先頭)</span>
+    <span class="n">print_node_backward</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">){</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span><span class="o">=</span><span class="n">head</span><span class="p">;</span> <span class="c1">// hは現在のhead</span>
+
+    <span class="c1">// ノード一つ分のデータ領域を確保</span>
+    <span class="k">if</span><span class="p">((</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span> <span class="n">node_t</span><span class="p">)))</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;malloc error&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 生成したノードにデータを代入</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span> <span class="c1">// まだリストが空の場合</span>
+        <span class="k">return</span> <span class="n">p</span><span class="p">;</span> <span class="c1">// headを更新</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span> <span class="c1">// リストに既にデータがある場合</span>
+
+        <span class="c1">// リストの末尾までポインタhを進める</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">h</span><span class="o">=</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span> <span class="c1">//現在のリストの次がp</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">h</span><span class="p">;</span> <span class="c1">//追加するリストの手前は現在の末尾</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>  <span class="c1">// headはそのまま</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print_node_forward</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[先頭-&gt;末尾]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;key, name</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print_node_backward</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">){</span>
+
+    <span class="c1">//まず，末尾までポインタを進める</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[末尾-&gt;先頭]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;key, name</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span> 
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span> <span class="c1">//末尾からprevを辿る</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>実行結果</p>
+
+<pre><code>[先頭-&gt;末尾]
+key, name
+101 Tanama
+102 Yamada
+103 Itou
+
+[末尾-&gt;先頭]
+key, name
+103 Itou
+102 Yamada
+101 Tanama</code></pre>
 
 </div>
 </div>
