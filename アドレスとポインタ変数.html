@@ -109,10 +109,13 @@ svg:not(:root) {
 figure {
   margin: 1em 40px;
 }
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
+	hr {
+		border-top: 2px solid black;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+	}
+
 pre {
   overflow: auto;
 }
@@ -1148,12 +1151,13 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-    hr {
-        border-top: 2px solid black;
-        border-right: none;
-        border-bottom: none;
-        border-left: none;
-    }
+	hr {
+		border-top: 2px solid black;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+	}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13293,7 +13297,7 @@ aのアドレスは 0x30c934568</code></pre>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;str1 =  %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str1[0] = %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str1[1] = %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str1[2] =  %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;str1[2] = %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>  <span class="o">&amp;</span><span class="n">str1</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -13314,7 +13318,7 @@ str1[2] = C
 str1 =  0x30551d568
 &amp;str1[0] = 0x30551d568
 &amp;str1[1] = 0x30551d569
-&amp;str1[2] =  0x30551d56a</code></pre>
+&amp;str1[2] = 0x30551d56a</code></pre>
 
 </div>
 </div>
