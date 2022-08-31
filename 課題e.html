@@ -13235,7 +13235,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>問題1.3で作成したプログラムにおいて, <strong>構造体のポインタ変数を使ってメンバを参照し</strong>, 表示するように変更せよ．</p>
+<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>問題1.3で作成したプログラムにおいて, <strong>構造体のポインタ変数を使ってメンバを参照し</strong>, for文を用いて表示するように変更せよ．</p>
 <p>なお, 構造体変数へのポインタは以下のように宣言すること.</p>
 <div class="highlight"><pre><span></span><span class="k">struct</span>  <span class="nc">member</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
 </pre></div>
@@ -13251,6 +13251,7 @@ $( document ).ready(function(){
 <p>なお, ユーザ関数は以下のように定義し，<font color="Red">構造体の値渡し</font>を用いること．</p>
 <div class="highlight"><pre><span></span><span class="c1">// 構造体を引数とする.</span>
 <span class="kt">void</span> <span class="n">disp</span><span class="p">(</span><span class="k">struct</span> <span class="nc">member</span> <span class="n">p</span><span class="p">[])</span>
+    <span class="c1">// 関数内ではfor文を用いる</span>
 </pre></div>
 <p>実行結果は問題1.3と同じである．</p>
 
@@ -13330,7 +13331,7 @@ $( document ).ready(function(){
         <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;佐藤&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span>
     <span class="p">};</span>
 
-    <span class="c1">// 最初ファイルを書き込み専用で開き， 閉じることで中身をクリアする</span>
+    <span class="c1">// 最初ファイルを書き込み専用で開き， 閉じることで中身をクリアする (初期化する)</span>
     <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="s">&quot;w&quot;</span><span class="p">);</span>
     <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
 
@@ -13390,7 +13391,7 @@ $( document ).ready(function(){
     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
     <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">10</span><span class="p">];</span>
 
-    <span class="c1">// 乱数シードを初期化</span>
+    <span class="c1">// 乱数シードを現在時刻で初期化</span>
     <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
 
     <span class="c1">// ラベルの文字列を設定</span>
@@ -13443,7 +13444,7 @@ x[6], 998</code></pre>
     <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">10</span><span class="p">];</span>
 
     <span class="c1">// 乱数シードを指定</span>
-    <span class="n">srand</span><span class="p">(</span><span class="mi">2021</span><span class="p">);</span>
+    <span class="n">srand</span><span class="p">(</span><span class="mi">2022</span><span class="p">);</span>
 
     <span class="c1">//コードを追加 (ファイルオープン)</span>
 
@@ -13490,8 +13491,7 @@ x[12], 178</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下は，モンテカルロ法を用いて𝜋の計算を行うプログラムである．</p>
 <p>課題eの説明のスライドを参考にし，プログラムを完成させよ．</p>
-<div class="highlight"><pre><span></span><span class="c1">// サンプルコード</span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 
@@ -13542,8 +13542,12 @@ x[12], 178</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下は，区間$[𝑎,𝑏]$で連続な関数$𝑦=𝑓(𝑥)$の定積分を行うプログラムである．</p>
 <p>課題eの説明のスライドを参考にし，プログラムを完成させよ．</p>
-<div class="highlight"><pre><span></span><span class="c1">// サンプルコード</span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<p>補足:</p>
+<ul>
+<li>閉区間$(a,b)$と開区間$[a,b]$ <a href="https://manabitimes.jp/math/1183">https://manabitimes.jp/math/1183</a></li>
+<li>区分求積法 <a href="https://www.geogebra.org/m/j3drerpy">https://www.geogebra.org/m/j3drerpy</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 
@@ -13596,6 +13600,19 @@ x[12], 178</code></pre>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-text/x-csrc"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>

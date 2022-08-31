@@ -13117,6 +13117,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>課題f</p>
 <p><a href="https://pythontutor.com/">https://pythontutor.com/</a></p>
 <p><a href="https://replit.com/">https://replit.com/</a></p>
 
@@ -13569,7 +13570,7 @@ index = -1</code></pre>
 <p><strong>リストから引数keyに一致するデータを検索する</strong>search_data関数を完成させよ．</p>
 <p>実行例1</p>
 
-<pre><code>ID, name
+<pre><code>key, name
 101 Tanaka
 102 Yamada
 103 Itou
@@ -13580,7 +13581,7 @@ index = -1</code></pre>
 104 Satou</code></pre>
 <p>実行例2</p>
 
-<pre><code>ID, name
+<pre><code>key, name
 101 Tanaka
 102 Yamada
 103 Itou
@@ -13643,9 +13644,9 @@ index = -1</code></pre>
     <span class="cm">/* コードを書く */</span>
 <span class="p">}</span>
 
-<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span><span class="p">){</span>
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">){</span>
     <span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
-    <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="n">h</span><span class="p">;</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span><span class="o">=</span><span class="n">head</span><span class="p">;</span> <span class="c1">// hは現在のhead</span>
 
     <span class="c1">// ノード一つ分のデータ領域を確保</span>
     <span class="k">if</span><span class="p">((</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span> <span class="n">node_t</span><span class="p">)))</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
@@ -13658,25 +13659,24 @@ index = -1</code></pre>
     <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
     <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 
-    <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>  <span class="c1">// まだリストが空の場合</span>
-        <span class="k">return</span> <span class="n">p</span><span class="p">;</span>  <span class="c1">// headを更新</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span> <span class="c1">// まだリストが空の場合</span>
+        <span class="k">return</span> <span class="n">p</span><span class="p">;</span> <span class="c1">// headを更新</span>
     <span class="p">}</span>
     <span class="k">else</span><span class="p">{</span> <span class="c1">// リストに既にデータがある場合</span>
 
-        <span class="c1">// リストの末尾までポインタを進める</span>
+        <span class="c1">// リストの末尾までポインタhを進める</span>
         <span class="k">while</span><span class="p">(</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
-            <span class="n">h</span> <span class="o">=</span> <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">h</span><span class="o">=</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
-
-        <span class="k">return</span> <span class="n">head</span><span class="p">;</span> <span class="c1">// headはそのまま</span>
+        <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span> <span class="c1">//現在のリストの次がp</span>
     <span class="p">}</span>
 
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>  <span class="c1">// headはそのまま</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">){</span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ID, name</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;key, name</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
@@ -13802,9 +13802,9 @@ ID, name
 
 <span class="p">}</span>
 
-<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span><span class="p">){</span>
+<span class="n">node_t</span> <span class="o">*</span><span class="nf">add_node_tail</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="p">){</span>
     <span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
-    <span class="n">node_t</span> <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="n">h</span><span class="p">;</span>
+    <span class="n">node_t</span> <span class="o">*</span><span class="n">h</span><span class="o">=</span><span class="n">head</span><span class="p">;</span> <span class="c1">// hは現在のhead</span>
 
     <span class="c1">// ノード一つ分のデータ領域を確保</span>
     <span class="k">if</span><span class="p">((</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span> <span class="n">node_t</span><span class="p">)))</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
@@ -13817,20 +13817,19 @@ ID, name
     <span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
     <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 
-    <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>  <span class="c1">// まだリストが空の場合</span>
-        <span class="k">return</span> <span class="n">p</span><span class="p">;</span>  <span class="c1">// headを更新</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span> <span class="c1">// まだリストが空の場合</span>
+        <span class="k">return</span> <span class="n">p</span><span class="p">;</span> <span class="c1">// headを更新</span>
     <span class="p">}</span>
     <span class="k">else</span><span class="p">{</span> <span class="c1">// リストに既にデータがある場合</span>
 
-        <span class="c1">// リストの末尾までポインタを進める</span>
+        <span class="c1">// リストの末尾までポインタhを進める</span>
         <span class="k">while</span><span class="p">(</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
-            <span class="n">h</span> <span class="o">=</span> <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">h</span><span class="o">=</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
-
-        <span class="k">return</span> <span class="n">head</span><span class="p">;</span> <span class="c1">// headはそのまま</span>
+        <span class="n">h</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span> <span class="c1">//現在のリストの次がp</span>
     <span class="p">}</span>
 
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>  <span class="c1">// headはそのまま</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">print_node</span><span class="p">(</span><span class="n">node_t</span> <span class="o">*</span><span class="n">p</span><span class="p">){</span>

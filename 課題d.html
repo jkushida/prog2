@@ -13203,7 +13203,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下は, 構造体srcの情報を同じ型の構造体であるdestにコピーするプログラムである．</p>
+<h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下は, 構造体srcの情報を<strong>同じ型の構造体</strong>であるdestにコピーするプログラムである．</p>
 <p>実行結果と同様の出力が表示されるように, プログラムを完成させよ．</p>
 <p>hint: 構造体のコピー 同じ型</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
@@ -13552,7 +13552,7 @@ dest.b = 3</code></pre>
 
 <span class="kt">void</span> <span class="nf">print_one_data</span><span class="p">(</span><span class="n">syain_dt</span> <span class="n">d</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span> <span class="cm">/*コードを書く*/</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span> <span class="cm">/* コードを書く */</span> <span class="p">);</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
     <span class="n">syain_dt</span> <span class="n">d1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">101</span><span class="p">,</span> <span class="s">&quot;Sakata&quot;</span><span class="p">,</span> <span class="mi">300000</span><span class="p">};</span>
@@ -13603,7 +13603,7 @@ dest.b = 3</code></pre>
 <ol>
 <li><p>配列score[3]の要素の平均をaverageに代入</p>
 </li>
-<li><p>averageの値により, hanteiを決定．</p>
+<li><p>averageの値により, 以下のようにhanteiを決定</p>
 <ul>
 <li>averageが60未満なら，hanteiに"不合格"を代入</li>
 <li>averageが60点以上なら，hanteiに"合格"を代入</li>
@@ -13759,7 +13759,7 @@ harada 23 87 36 48.7 不合格</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下のプログラムでは，構造体に５件の社員のデータを格納している．</p>
-<p>このデータ(構造体配列)をkyuuyoをキーとして，実行結果のように昇順に並び替えよ．</p>
+<p>このデータ(構造体配列)をkyuuyoをキーとして，実行結果のように昇順に並び替えよ(ソートせよ)．</p>
 <p>ソートの際に必要となるswap関数(構造体を入れ替える関数)も作成すること．</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
@@ -13803,6 +13803,9 @@ harada 23 87 36 48.7 不合格</code></pre>
 <span class="kt">void</span> <span class="nf">print_one_data</span><span class="p">(</span><span class="n">syain_dt</span> <span class="n">sp</span><span class="p">){</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d </span><span class="se">\t</span><span class="s"> %s </span><span class="se">\t</span><span class="s"> %.1f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">sp</span><span class="p">.</span><span class="n">no</span><span class="p">,</span>  <span class="n">sp</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>  <span class="n">sp</span><span class="p">.</span><span class="n">kyuuyo</span><span class="p">);</span>
 <span class="p">}</span>
+
+<span class="c1">// 構造体を入れ替える関数</span>
+<span class="c1">// コードを書く</span>
 </pre></div>
 <p>実行結果</p>
 
@@ -13848,7 +13851,7 @@ harada 23 87 36 48.7 不合格</code></pre>
 
     <span class="c1">// 配列arrayのデータからN個の構造体を生成</span>
     <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="cm">/*コードを書く*/</span> <span class="o">=</span> <span class="n">generate_one_data</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="cm">/* コードを書く */</span> <span class="o">=</span> <span class="n">generate_one_data</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
     <span class="p">}</span>
 
     <span class="c1">// 生成された構造体を表示</span>
@@ -13867,7 +13870,7 @@ harada 23 87 36 48.7 不合格</code></pre>
 <span class="c1">// 構造体のメモリ領域を確保し，引数のarrayの値を代入して返却する関数</span>
 <span class="n">data_t</span> <span class="o">*</span><span class="nf">generate_one_data</span><span class="p">(</span><span class="kt">double</span> <span class="n">array</span><span class="p">[]){</span>
     <span class="n">data_t</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span>
-    <span class="cm">/*コードを書く*/</span>
+    <span class="cm">/* コードを書く */</span>
 
     <span class="n">d</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
     <span class="n">d</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
@@ -13884,6 +13887,19 @@ harada 23 87 36 48.7 不合格</code></pre>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-text/x-csrc"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>

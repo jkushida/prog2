@@ -13327,7 +13327,7 @@ putchar関数は文字を1文字標準出力に出力する関数</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="-"> <a class="anchor-link" href="#-">&#182;</a></h2><p>以下のプログラムでは，文字型配列<code>str1</code>に, "abcde" という文字列が格納されている．</p>
-<p>ポインタを２つ用いて, 文字型配列<code>str2</code>に<code>str1</code>の要素を逆順に格納し，表示させよ．</p>
+<p><strong>ポインタを２つ用いて</strong>, 文字型配列<code>str2</code>に<code>str1</code>の要素を逆順に格納し，表示させよ．</p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -13591,7 +13591,7 @@ putchar関数は文字を1文字標準出力に出力する関数</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#12518;&#12540;&#12470;&#38306;&#25968;1">&#12518;&#12540;&#12470;&#38306;&#25968;1<a class="anchor-link" href="#&#12518;&#12540;&#12470;&#38306;&#25968;1">&#182;</a></h1><p>値渡しの問題</p>
+<h1 id="&#12518;&#12540;&#12470;&#38306;&#25968;1">&#12518;&#12540;&#12470;&#38306;&#25968;1<a class="anchor-link" href="#&#12518;&#12540;&#12470;&#38306;&#25968;1">&#182;</a></h1><p><span style="color: red; ">値渡しの問題</span></p>
 
 </div>
 </div>
@@ -13689,6 +13689,7 @@ input j = 6, t = 1</code></pre>
     <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">3.4</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">-1.2</span><span class="p">;</span>
 
     <span class="c1">// 関数の呼び出し</span>
+    <span class="c1">// func(x, y)の戻り値が出力される</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -13782,6 +13783,7 @@ input j = 6, t = 1</code></pre>
 <span class="p">{</span>
     <span class="kt">char</span> <span class="n">str</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Information&quot;</span><span class="p">;</span>
 
+    <span class="c1">// この関数内で文字列を表示</span>
     <span class="n">func</span><span class="p">(</span> <span class="cm">/* コードを書く */</span> <span class="p">);</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -13801,7 +13803,7 @@ input j = 6, t = 1</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#12518;&#12540;&#12470;&#38306;&#25968;2">&#12518;&#12540;&#12470;&#38306;&#25968;2<a class="anchor-link" href="#&#12518;&#12540;&#12470;&#38306;&#25968;2">&#182;</a></h1><p>参照渡しの問題</p>
+<h1 id="&#12518;&#12540;&#12470;&#38306;&#25968;2">&#12518;&#12540;&#12470;&#38306;&#25968;2<a class="anchor-link" href="#&#12518;&#12540;&#12470;&#38306;&#25968;2">&#182;</a></h1><p><span style="color: red; ">参照渡しの問題</span></p>
 
 </div>
 </div>
@@ -13821,13 +13823,13 @@ input j = 6, t = 1</code></pre>
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;swap関数前 a = %d, b = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
 
-    <span class="n">swap</span><span class="p">(</span> <span class="cm">/* コードを書く*/</span>　<span class="p">);</span> 
+    <span class="n">swap</span><span class="p">(</span> <span class="cm">/* コードを書く */</span>　<span class="p">);</span> 
 
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;swap関数後 a = %d, b = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span> <span class="cm">/* コードを書く*/</span> <span class="p">)</span>
+<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span> <span class="cm">/* コードを書く */</span> <span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
 
@@ -13892,6 +13894,7 @@ swap関数後 a = 3, b = 7</code></pre>
     <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">array</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
 
     <span class="c1">// 配列の要素数を計算</span>
+    <span class="c1">// 配列の要素全体の大きさ(sizeof array) / 配列の要素一つ分の大きさ(sizeof array[0])</span>
     <span class="n">N</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
     <span class="n">func</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -13949,6 +13952,8 @@ swap関数後 a = 3, b = 7</code></pre>
 <a href="https://jkushida.github.io/prog2/%E3%83%97%E3%83%AA%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5.html">マクロ名定義</a></p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
+
+<span class="c1">// 「マクロ定義名」は，慣例として全て大文字の名前で定義</span>
 <span class="cp">#define N 5</span>
 
 <span class="kt">void</span> <span class="nf">func</span><span class="p">(</span> <span class="cm">/* コードを書く*/</span> <span class="p">);</span>
