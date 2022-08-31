@@ -109,10 +109,12 @@ svg:not(:root) {
 figure {
   margin: 1em 40px;
 }
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
+	hr {
+		border-top: 2px solid black;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+	}
 pre {
   overflow: auto;
 }
@@ -1148,13 +1150,12 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-    hr {
-        border-top: 2px solid black;
-        border-right: none;
-        border-bottom: none;
-        border-left: none;
-    }
-
+	hr {
+		border-top: 2px solid black;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+	}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -14140,7 +14141,7 @@ no = 4, value = 4.23</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstring.h%3E%0A%0Astruct%20student%7B%20%20%20%20%0A%20%20int%20no%3B%20%20%20%20%20%20%20%20%20%20%0A%20%20char%20name%5B10%5D%3B%20%20%20%0A%20%20double%20average%3B%20%20%0A%7D%20seito1,seito2%3B%0A%20%0Aint%20main%28%29%0A%7B%0A%20%20seito1.no%20%3D%205%3B%0A%20%20strcpy%28seito1.name,%20%22Yamada%22%29%3B%0A%20%20seito1.average%20%3D%2056.7%3B%0A%0A%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%20%25d,%20%20%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20%E5%B9%B3%E5%9D%87%E7%82%B9%3A%20%25f%5Cn%22,seito1.no,%20seito1.name,%20seito1.average%29%3B%0A%20%20%0A%20%20seito2%20%3D%20seito1%3B%0A%20%20%0A%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%20%25d,%20%20%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20%E5%B9%B3%E5%9D%87%E7%82%B9%3A%20%25f%5Cn%22,seito2.no,%20seito2.name,%20seito2.average%29%3B%0A%20%20%0A%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
+<p><a href="https://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%23include%20%3Cstring.h%3E%0A%0Astruct%20student%7B%20%20%20%20%0A%20%20int%20no%3B%20%20%20%20%20%20%20%20%20%20%0A%20%20char%20name%5B10%5D%3B%20%20%20%0A%20%20double%20average%3B%20%20%0A%7D%20seito1,seito2%3B%0A%20%0Aint%20main%28%29%0A%7B%0A%20%20seito1.no%20%3D%205%3B%0A%20%20strcpy%28seito1.name,%20%22Yamada%22%29%3B%0A%20%20seito1.average%20%3D%2056.7%3B%0A%0A%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%20%25d,%20%20%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20%E5%B9%B3%E5%9D%87%E7%82%B9%3A%20%25f%5Cn%22,seito1.no,%20seito1.name,%20seito1.average%29%3B%0A%20%20%0A%20%20seito2%20%3D%20seito1%3B%0A%20%20%0A%20%20printf%28%22%E5%AD%A6%E7%94%9F%E7%95%AA%E5%8F%B7%3A%20%25d,%20%20%E6%B0%8F%E5%90%8D%3A%20%25s,%20%20%E5%B9%B3%E5%9D%87%E7%82%B9%3A%20%25f%5Cn%22,seito2.no,%20seito2.name,%20seito2.average%29%3B%0A%20%20%0A%20%20return%20%280%29%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c_gcc9.3.0&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">実行の可視化</a></p>
 
 </div>
 </div>
